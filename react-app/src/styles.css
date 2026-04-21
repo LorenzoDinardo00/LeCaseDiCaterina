@@ -1190,10 +1190,11 @@ img {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 48px;
     border-bottom: 1px solid rgba(250, 246, 241, 0.1);
+    align-items: start;
 }
 
 .footer-logo {
@@ -1262,29 +1263,29 @@ img {
 }
 
 .footer-legal {
-    border-top: 1px solid rgba(250, 246, 241, 0.15);
-    margin-top: 30px;
-    padding-top: 20px;
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 1px solid rgba(250, 246, 241, 0.1);
 }
 
 .footer-legal p {
-    font-size: 0.8rem;
-    color: rgba(250, 246, 241, 0.55);
-    margin: 4px 0;
-    line-height: 1.5;
+    font-size: 0.78rem;
+    color: rgba(250, 246, 241, 0.5);
+    margin: 3px 0;
+    line-height: 1.6;
 }
 
 .footer-bottom {
-    padding-top: 16px;
-    text-align: center;
+    padding-top: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
 }
 
 .footer-bottom p {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: rgba(250, 246, 241, 0.5);
     margin: 0;
 }
@@ -1312,6 +1313,7 @@ img {
 
     .footer-content {
         grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
 }
 
@@ -1900,9 +1902,9 @@ img {
 
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 30px;
         text-align: center;
-        padding-bottom: 35px;
+        padding-bottom: 30px;
     }
 
     .footer-logo {
@@ -1915,10 +1917,9 @@ img {
         font-size: 0.9rem;
     }
 
-    .footer-links h4,
-    .footer-social h4 {
+    .footer-links h4 {
         font-size: 0.8rem;
-        margin-bottom: 18px;
+        margin-bottom: 15px;
     }
 
     .footer-links ul {
@@ -1930,22 +1931,23 @@ img {
         font-size: 0.9rem;
     }
 
-    .social-links {
-        justify-content: center;
-        gap: 12px;
+    .footer-legal {
+        padding: 18px 0;
     }
 
-    .social-links a {
-        width: 50px;
-        height: 50px;
+    .footer-legal p {
+        font-size: 0.75rem;
     }
 
     .footer-bottom {
-        padding-top: 25px;
+        padding-top: 18px;
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
     }
 
     .footer-bottom p {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
     }
 
     /* === CONTAINER MOBILE === */
