@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Stanze di Caterina</title>
+  
+  <!-- Preload hero image for instant display -->
+  <link rel="preload" as="image" href="/img/IMG_0714.JPG" fetchpriority="high">
+  
+  <!-- Bunny Fonts - Privacy-friendly alternative to Google Fonts (not blocked by Brave) -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link
+    href="https://fonts.bunny.net/css?family=cormorant-garamond:300,300i,400,400i,500,600|montserrat:300,400,500"
+    rel="stylesheet">
+  <style>
+    /* Fallback fonts in case external fonts are blocked */
+    :root {
+      --font-primary: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-secondary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
