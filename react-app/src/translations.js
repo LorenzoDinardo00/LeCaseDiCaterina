@@ -7,7 +7,8 @@ export const translations = {
       rooms: 'Le Stanze',
       gallery: 'Galleria',
       location: 'Posizione',
-      contact: 'Contatti'
+      contact: 'Contatti',
+      bookNow: 'Prenota Ora'
     },
 
     // Hero
@@ -82,6 +83,7 @@ export const translations = {
       description: 'Per informazioni e prenotazioni, non esitate a contattarci. Il nostro team sarà lieto di assistervi nella pianificazione del vostro soggiorno perfetto.',
       address: 'Indirizzo',
       phone: 'Telefono',
+      whatsapp: 'WhatsApp',
       email: 'Email'
     },
 
@@ -199,7 +201,8 @@ export const translations = {
       rooms: 'Rooms',
       gallery: 'Gallery',
       location: 'Location',
-      contact: 'Contact'
+      contact: 'Contact',
+      bookNow: 'Book Now'
     },
 
     // Hero
@@ -274,6 +277,7 @@ export const translations = {
       description: 'For information and reservations, please do not hesitate to contact us. Our team will be happy to assist you in planning your perfect stay.',
       address: 'Address',
       phone: 'Phone',
+      whatsapp: 'WhatsApp',
       email: 'Email'
     },
 
@@ -392,4 +396,3 @@ export function t(translations, language, path) {
   }
   return result || path
 }
-

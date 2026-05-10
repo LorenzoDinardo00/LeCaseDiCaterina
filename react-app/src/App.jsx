@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useLanguage } from './LanguageContext'
 import { useCookieConsent } from './ConsentManager'
@@ -100,12 +100,12 @@ function Navbar() {
     document.body.style.overflow = !mobileMenuOpen ? 'hidden' : ''
   }
 
-  const closeMobileMenu = () => {
+  const closeMobileMenu = useCallback(() => {
     if (mobileMenuOpen) {
       setMobileMenuOpen(false)
       document.body.style.overflow = ''
     }
-  }
+  }, [mobileMenuOpen])
 
   // Close menu on touch scroll or mouse wheel
   useEffect(() => {
@@ -141,7 +141,7 @@ function Navbar() {
       document.removeEventListener('touchmove', handleTouchMove)
       document.removeEventListener('wheel', handleWheel)
     }
-  }, [mobileMenuOpen])
+  }, [mobileMenuOpen, closeMobileMenu])
 
   // All navigation links for mobile menu
   const allNavLinks = [
@@ -184,18 +184,29 @@ function Navbar() {
               </a>
             </li>
           ))}
+          <li className="mobile-nav-item nav-booking-item" onClick={(e) => e.stopPropagation()}>
+            <Link to="/prenota" className="nav-booking-link" onClick={closeMobileMenu}>
+              {t.nav.bookNow}
+            </Link>
+          </li>
         </ul>
 
-        {/* Language Toggle Button */}
-        <button className="lang-toggle" onClick={toggleLanguage} aria-label="Change language">
-          {language === 'it' ? 'EN' : 'IT'}
-        </button>
+        <div className="nav-actions">
+          <Link to="/prenota" className="nav-booking-mobile" onClick={closeMobileMenu}>
+            {t.nav.bookNow}
+          </Link>
 
-        <button className={`nav-toggle ${mobileMenuOpen ? 'active' : ''}`} aria-label="Menu" onClick={toggleMobileMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          {/* Language Toggle Button */}
+          <button className="lang-toggle" onClick={toggleLanguage} aria-label="Change language">
+            {language === 'it' ? 'EN' : 'IT'}
+          </button>
+
+          <button className={`nav-toggle ${mobileMenuOpen ? 'active' : ''}`} aria-label="Menu" onClick={toggleMobileMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </nav>
   )
@@ -557,6 +568,22 @@ function ContactSection() {
                 <div>
                   <strong>{t.contact.phone}</strong>
                   <p>+39 333 199 2394</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20.5 11.8a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.2-4.5A8.5 8.5 0 1 1 20.5 11.8z" />
+                    <path d="M8.6 8.8c.2-.5.4-.6.7-.6h.7c.2 0 .4.1.5.3l.8 1.8c.1.2.1.4-.1.6l-.6.7c.7 1.2 1.7 2.2 2.9 2.9l.7-.6c.2-.2.4-.2.6-.1l1.8.8c.2.1.3.3.3.5v.7c0 .3-.2.5-.6.7-.5.2-1 .3-1.6.2-3.3-.6-5.9-3.2-6.5-6.5-.1-.6 0-1.1.2-1.6z" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>{t.contact.whatsapp}</strong>
+                  <p>
+                    <a className="contact-link" href="https://wa.me/393331992394" target="_blank" rel="noopener noreferrer">
+                      +39 333 199 2394
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="contact-item">
