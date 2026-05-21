@@ -477,7 +477,7 @@ function GallerySection() {
 function LocationSection() {
   const { language } = useLanguage()
   const t = translations[language]
-  const { hasAnalyticsConsent } = useCookieConsent()
+  const { hasMarketingConsent } = useCookieConsent()
 
   const handleAcceptCookies = () => {
     window.dispatchEvent(new Event('openCookieBanner'))
@@ -503,8 +503,9 @@ function LocationSection() {
           </div>
           <div className="location-map">
             <div className="map-placeholder">
-              {hasAnalyticsConsent ? (
+              {hasMarketingConsent ? (
                 <iframe
+                  title="Mappa - Le Stanze di Caterina"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.0876543209876!2d11.2558136!3d43.7731313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403bba4a5c1%3A0x5c7b0e8b3e8f1234!2sDuomo%20di%20Firenze!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit"
                   allowFullScreen=""
                   loading="lazy"
@@ -517,9 +518,11 @@ function LocationSection() {
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                       <circle cx="12" cy="10" r="3" />
                     </svg>
-                    <p>{language === 'it' ? 'Per visualizzare la mappa, accetta i cookie di terze parti' : 'To view the map, accept third-party cookies'}</p>
+                    <p>{language === 'it'
+                      ? 'Per visualizzare la mappa è necessario accettare i contenuti di terze parti (Google Maps). Nessun cookie di Google viene impostato senza il tuo consenso.'
+                      : 'To view the map you need to accept third-party content (Google Maps). No Google cookie is set without your consent.'}</p>
                     <button onClick={handleAcceptCookies} className="btn-accept-map">
-                      {language === 'it' ? 'Gestisci Cookie' : 'Manage Cookies'}
+                      {language === 'it' ? 'Gestisci preferenze cookie' : 'Manage cookie preferences'}
                     </button>
                   </div>
                 </div>

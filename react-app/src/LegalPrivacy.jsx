@@ -26,24 +26,20 @@ export default function PrivacyPolicy() {
                             <p>{t.intro}</p>
                         </section>
 
-                        <section>
-                            <h2>{t.controller}</h2>
-                            <p>{t.controllerText}</p>
-                        </section>
+                        {t.sections.map((section, idx) => (
+                            <section key={idx}>
+                                <h2>{section.title}</h2>
+                                <p>{section.body}</p>
+                            </section>
+                        ))}
 
-                        <section>
-                            <h2>{t.purpose}</h2>
-                            <p>{t.purposeText}</p>
-                        </section>
-
-                        <section>
-                            <h2>{t.rights}</h2>
-                            <p>{t.rightsText}</p>
-                        </section>
-
-                        <section className="booking-note">
-                            <h2>{t.bookingNote}</h2>
-                            <p>{t.bookingNoteText}</p>
+                        <section className="policy-cta">
+                            <p>
+                                {language === 'it'
+                                    ? 'Per la gestione granulare dei cookie consulta la '
+                                    : 'For granular cookie management see the '}
+                                <Link to="/cookie-policy">{language === 'it' ? 'Cookie Policy' : 'Cookie Policy'}</Link>.
+                            </p>
                         </section>
                     </div>
 

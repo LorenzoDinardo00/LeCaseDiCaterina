@@ -1,37 +1,71 @@
-import { useEffect } from 'react'
+import { useEffect, useState, useCallback } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from './LanguageContext'
+import { translations } from './translations'
+
+const REDIRECT_SECONDS = 8
 
 export default function BookingPage() {
     const { language } = useLanguage()
+    const navigate = useNavigate()
+    const t = translations[language].booking
+    const [secondsLeft, setSecondsLeft] = useState(REDIRECT_SECONDS)
+    const [redirecting, setRedirecting] = useState(false)
+
+    const xenionUrl = language === 'en'
+        ? 'https://my.xenion.it/lestanzedicaterina/paginaprenotazione?idstructure=1&lang=en'
+        : 'https://my.xenion.it/lestanzedicaterina/paginaprenotazione?idstructure=1&lang=it'
+
+    const goToXenion = useCallback(() => {
+        setRedirecting(true)
+        window.location.href = xenionUrl
+    }, [xenionUrl])
 
     useEffect(() => {
-        // Redirect directly to Xenion booking engine based on language
-        const xenionUrl = language === 'en'
-            ? 'https://my.xenion.it/lestanzedicaterina/paginaprenotazione?idstructure=1&lang=en'
-            : 'https://my.xenion.it/lestanzedicaterina/paginaprenotazione?idstructure=1&lang=it'
+        window.scrollTo(0, 0)
+    }, [])
 
-        // Redirect to Xenion booking page
-        window.location.href = xenionUrl
-    }, [language])
+    useEffect(() => {
+        if (redirecting) return
+        if (secondsLeft <= 0) {
+            goToXenion()
+            return
+        }
+        const id = setTimeout(() => setSecondsLeft((s) => s - 1), 1000)
+        return () => clearTimeout(id)
+    }, [secondsLeft, redirecting, goToXenion])
 
-    // Show a simple loading message while redirecting
     return (
-        <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '100vh',
-            background: '#FAF6F1',
-            fontFamily: 'Montserrat, sans-serif',
-            color: '#2C2421'
-        }}>
-            <div style={{ textAlign: 'center' }}>
-                <h1 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '2rem', marginBottom: '1rem' }}>
-                    {language === 'it' ? 'Reindirizzamento...' : 'Redirecting...'}
-                </h1>
-                <p>{language === 'it'
-                    ? 'Ti stiamo portando alla pagina di prenotazione'
-                    : 'Taking you to the booking page'}</p>
+        <div className="booking-bridge">
+            <div className="booking-bridge-card">
+                <h1>{t.title}</h1>
+                <p className="booking-intro">{t.intro}</p>
+
+                <h2>{t.noticeTitle}</h2>
+                <ul className="booking-points">
+                    {t.points.map((point, idx) => (
+                        <li key={idx}>{point}</li>
+                    ))}
+                </ul>
+
+                <p className="booking-privacy-link">
+                    <Link to="/privacy-policy">{t.privacyLink}</Link>
+                </p>
+
+                <div className="booking-actions">
+                    <button type="button" className="btn-booking-proceed" onClick={goToXenion} disabled={redirecting}>
+                        {redirecting ? t.redirecting : t.proceed}
+                    </button>
+                    <button type="button" className="btn-booking-back" onClick={() => navigate('/')} disabled={redirecting}>
+                        {t.back}
+                    </button>
+                </div>
+
+                {!redirecting && (
+                    <p className="booking-countdown">
+                        {t.autoRedirect.replace('{seconds}', secondsLeft)}
+                    </p>
+                )}
             </div>
         </div>
     )

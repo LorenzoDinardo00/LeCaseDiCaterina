@@ -611,6 +611,11 @@
     border: none;
 }
 
+.location-map-container .map-consent-placeholder {
+    border-radius: 20px;
+    min-height: 400px;
+}
+
 
 /* ========================================
    OTHER ROOMS SECTION

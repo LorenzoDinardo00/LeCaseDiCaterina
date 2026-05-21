@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { Navbar } from './App'
 import { useLanguage } from './LanguageContext'
+import { useCookieConsent } from './ConsentManager'
 import { translations } from './translations'
 
 // Room data with images only (text comes from translations)
@@ -184,6 +185,11 @@ function RoomPage() {
     const room = roomsData[roomId]
     const { language } = useLanguage()
     const t = translations[language]
+    const { hasMarketingConsent } = useCookieConsent()
+
+    const handleEnableMap = () => {
+        window.dispatchEvent(new Event('openCookieBanner'))
+    }
 
     const [lightboxOpen, setLightboxOpen] = useState(false)
     const [lightboxIndex, setLightboxIndex] = useState(0)
@@ -296,12 +302,30 @@ function RoomPage() {
                         <h2>{t.roomPage.locationTitle}</h2>
                         <p>{t.roomPage.locationDesc}</p>
                         <div className="location-map-container">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.0876543209876!2d11.2558136!3d43.7731313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403bba4a5c1%3A0x5c7b0e8b3e8f1234!2sDuomo%20di%20Firenze!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit"
-                                allowFullScreen=""
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade">
-                            </iframe>
+                            {hasMarketingConsent ? (
+                                <iframe
+                                    title="Mappa - Duomo di Firenze"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.0876543209876!2d11.2558136!3d43.7731313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403bba4a5c1%3A0x5c7b0e8b3e8f1234!2sDuomo%20di%20Firenze!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit"
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            ) : (
+                                <div className="map-consent-placeholder">
+                                    <div className="map-consent-content">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                        <p>{language === 'it'
+                                            ? 'Per visualizzare la mappa è necessario accettare i contenuti di terze parti (Google Maps). Nessun cookie di Google verrà impostato senza il tuo consenso.'
+                                            : 'To view the map you need to accept third-party content (Google Maps). No Google cookie will be set without your consent.'}</p>
+                                        <button onClick={handleEnableMap} className="btn-accept-map">
+                                            {language === 'it' ? 'Gestisci preferenze cookie' : 'Manage cookie preferences'}
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

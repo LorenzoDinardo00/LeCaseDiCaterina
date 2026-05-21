@@ -2,12 +2,16 @@ import { createContext, useState, useContext, useEffect } from 'react'
 
 const CookieConsentContext = createContext()
 
-// Safe localStorage helpers that handle blocked storage (e.g., Brave browser)
+const DEFAULT_CONSENT = {
+    necessary: true,
+    analytics: false,
+    marketing: false
+}
+
 const safeGetItem = (key) => {
     try {
         return localStorage.getItem(key)
     } catch (e) {
-        // localStorage is blocked or unavailable
         console.warn('localStorage is not available:', e.message)
         return null
     }
@@ -18,35 +22,34 @@ const safeSetItem = (key, value) => {
         localStorage.setItem(key, value)
         return true
     } catch (e) {
-        // localStorage is blocked or unavailable
         console.warn('localStorage is not available:', e.message)
         return false
     }
 }
 
-export function CookieConsentProvider({ children }) {
-    const [consent, setConsent] = useState({
-        necessary: true,
-        analytics: false
-    })
+const normalizeConsent = (raw) => ({
+    necessary: true,
+    analytics: raw?.analytics === true,
+    marketing: raw?.marketing === true
+})
 
-    // Load consent from localStorage on mount
+export function CookieConsentProvider({ children }) {
+    const [consent, setConsent] = useState(DEFAULT_CONSENT)
+
     useEffect(() => {
         try {
             const savedConsent = safeGetItem('cookieConsent')
             if (savedConsent) {
                 const parsed = JSON.parse(savedConsent)
-                setConsent(parsed)
+                setConsent(normalizeConsent(parsed))
             }
         } catch (e) {
-            // Invalid format or storage blocked, use default
             console.warn('Could not load cookie consent:', e.message)
         }
 
-        // Listen for consent changes from CookieBanner
         const handleConsentChange = (event) => {
             if (event.detail) {
-                setConsent(event.detail)
+                setConsent(normalizeConsent(event.detail))
             }
         }
 
@@ -55,20 +58,22 @@ export function CookieConsentProvider({ children }) {
     }, [])
 
     const updateConsent = (newConsent) => {
-        setConsent(newConsent)
-        safeSetItem('cookieConsent', JSON.stringify(newConsent))
-        // Dispatch event for other components
+        const normalized = normalizeConsent(newConsent)
+        const payload = { ...normalized, timestamp: new Date().toISOString(), version: 2 }
+        setConsent(normalized)
+        safeSetItem('cookieConsent', JSON.stringify(payload))
         try {
-            window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: newConsent }))
+            window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: normalized }))
         } catch (e) {
             console.warn('Could not dispatch consent event:', e.message)
         }
     }
 
     const hasAnalyticsConsent = consent.analytics === true
+    const hasMarketingConsent = consent.marketing === true
 
     return (
-        <CookieConsentContext.Provider value={{ consent, updateConsent, hasAnalyticsConsent }}>
+        <CookieConsentContext.Provider value={{ consent, updateConsent, hasAnalyticsConsent, hasMarketingConsent }}>
             {children}
         </CookieConsentContext.Provider>
     )
@@ -77,11 +82,11 @@ export function CookieConsentProvider({ children }) {
 export function useCookieConsent() {
     const context = useContext(CookieConsentContext)
     if (!context) {
-        // Return default values instead of throwing to prevent app crash
         return {
-            consent: { necessary: true, analytics: false },
+            consent: DEFAULT_CONSENT,
             updateConsent: () => {},
-            hasAnalyticsConsent: false
+            hasAnalyticsConsent: false,
+            hasMarketingConsent: false
         }
     }
     return context

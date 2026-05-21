@@ -5,7 +5,6 @@ import { translations } from './translations'
 import { useCookieConsent } from './ConsentManager'
 import './styles.css'
 
-// Safe localStorage helper that handles blocked storage (e.g., Brave browser)
 const safeGetItem = (key) => {
     try {
         return localStorage.getItem(key)
@@ -22,62 +21,58 @@ export default function CookieBanner() {
     const [isVisible, setIsVisible] = useState(false)
     const [showPreferences, setShowPreferences] = useState(false)
 
-    // Local preferences state for the form
     const [preferences, setPreferences] = useState({
         necessary: true,
-        analytics: false
+        analytics: false,
+        marketing: false
     })
 
     useEffect(() => {
-        // Check if consent is already saved
         try {
             const savedConsent = safeGetItem('cookieConsent')
             if (!savedConsent) {
-                // Longer delay to let the page load first
                 const timer = setTimeout(() => setIsVisible(true), 2000)
                 return () => clearTimeout(timer)
             } else {
-                // If saved, load preferences and DON'T show banner
                 try {
                     const parsed = JSON.parse(savedConsent)
-                    setPreferences(parsed)
-                    setIsVisible(false) // Explicitly don't show
+                    setPreferences({
+                        necessary: true,
+                        analytics: parsed?.analytics === true,
+                        marketing: parsed?.marketing === true
+                    })
+                    setIsVisible(false)
                 } catch (e) {
-                    // invalid format, show banner after delay
                     const timer = setTimeout(() => setIsVisible(true), 2000)
                     return () => clearTimeout(timer)
                 }
             }
         } catch (e) {
-            // If localStorage is blocked (Brave), don't show banner at all
-            // The site should work without cookies
             console.warn('localStorage blocked, skipping cookie banner')
             setIsVisible(false)
-            return
         }
+    }, [])
 
-        // specific event to re-open banner
+    useEffect(() => {
         const handleReopen = () => {
             setIsVisible(true)
             setShowPreferences(true)
         }
-
         window.addEventListener('openCookieBanner', handleReopen)
         return () => window.removeEventListener('openCookieBanner', handleReopen)
     }, [])
 
     const saveConsent = (choice) => {
-        let finalPreferences = { necessary: true, analytics: false }
+        let finalPreferences = { necessary: true, analytics: false, marketing: false }
 
         if (choice === 'all') {
-            finalPreferences = { necessary: true, analytics: true }
+            finalPreferences = { necessary: true, analytics: true, marketing: true }
         } else if (choice === 'reject') {
-            finalPreferences = { necessary: true, analytics: false }
+            finalPreferences = { necessary: true, analytics: false, marketing: false }
         } else if (choice === 'custom') {
             finalPreferences = { ...preferences, necessary: true }
         }
 
-        // Update context (this also saves to localStorage and dispatches event)
         updateConsent(finalPreferences)
         setPreferences(finalPreferences)
         setIsVisible(false)
@@ -90,7 +85,6 @@ export default function CookieBanner() {
         <div className="cookie-banner-overlay">
             <div className="cookie-banner">
                 {!showPreferences ? (
-                    // Main view
                     <div className="cookie-content">
                         <div className="cookie-text">
                             <h3>{t.title}</h3>
@@ -110,7 +104,6 @@ export default function CookieBanner() {
                         </div>
                     </div>
                 ) : (
-                    // Preferences View
                     <div className="cookie-preferences">
                         <div className="preferences-header">
                             <h3>{t.preferencesTitle}</h3>
@@ -144,12 +137,27 @@ export default function CookieBanner() {
                             <p className="pref-desc">{t.analyticsDesc}</p>
                         </div>
 
+                        <div className="preference-item">
+                            <div className="pref-label">
+                                <span>{t.marketing}</span>
+                                <input
+                                    type="checkbox"
+                                    checked={preferences.marketing}
+                                    onChange={(e) => setPreferences({ ...preferences, marketing: e.target.checked })}
+                                />
+                            </div>
+                            <p className="pref-desc">{t.marketingDesc}</p>
+                        </div>
+
                         <div className="preferences-actions">
                             <button className="btn-cookie btn-save" onClick={() => saveConsent('custom')}>
                                 {t.save}
                             </button>
                             <button className="btn-cookie btn-accept" onClick={() => saveConsent('all')}>
                                 {t.accept}
+                            </button>
+                            <button className="btn-cookie btn-reject" onClick={() => saveConsent('reject')}>
+                                {t.reject}
                             </button>
                         </div>
                     </div>
