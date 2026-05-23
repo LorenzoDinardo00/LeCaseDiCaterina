@@ -17,7 +17,8 @@ import {
     roomJsonLd,
     breadcrumbJsonLd,
     faqJsonLd,
-    absUrl
+    absUrl,
+    alternateUrlsForPath
 } from '../src/siteMetadata.js'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -35,18 +36,19 @@ const escapeHtml = (s = '') =>
 const safeJsonLd = (obj) =>
     JSON.stringify(obj).replace(/</g, '\\u003c')
 
-function metaTags({ title, description, canonical, image, noindex, language }) {
+function metaTags({ title, description, canonical, image, noindex, language, alternates = null }) {
     const ogLocale = language === 'en' ? 'en_US' : 'it_IT'
     const robots = noindex
         ? '<meta name="robots" content="noindex,nofollow">'
         : '<meta name="robots" content="index,follow,max-image-preview:large">'
+    const alternateLinks = Object.entries(alternates || alternateUrlsForPath(new URL(canonical).pathname))
+        .map(([hreflang, href]) => `<link rel="alternate" hreflang="${escapeHtml(hreflang)}" href="${escapeHtml(href)}">`)
+        .join('\n    ')
     return `
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}">
     <link rel="canonical" href="${escapeHtml(canonical)}">
-    <link rel="alternate" hreflang="it" href="${escapeHtml(canonical)}">
-    <link rel="alternate" hreflang="en" href="${escapeHtml(canonical)}">
-    <link rel="alternate" hreflang="x-default" href="${escapeHtml(canonical)}">
+    ${alternateLinks}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="${escapeHtml(SITE.name)}">
     <meta property="og:title" content="${escapeHtml(title)}">
@@ -243,11 +245,11 @@ function noscriptForRoute(route, lang = 'it') {
 }
 
 function ssrFallbackFor(route) {
-    // Contenuto bilingue dentro un div nascosto (display:none) ma indicizzabile.
+    // Contenuto statico visibile se JavaScript non parte; React lo sostituisce al mount.
     const it = noscriptForRoute(route, 'it')
     const en = noscriptForRoute(route, 'en')
     if (!it && !en) return ''
-    return `<div id="ssr-fallback" aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+    return `<div id="ssr-fallback" data-prerender-fallback>
 <section lang="it">${it}</section>
 <section lang="en">${en}</section>
 </div>`
@@ -272,7 +274,8 @@ async function generateRoute(route, baseHtml) {
         canonical: absUrl(route.path),
         image,
         noindex: !!route.noindex,
-        language: 'it'
+        language: 'it',
+        alternates: alternateUrlsForPath(route.path)
     })
     const jsonLd = jsonLdScripts(buildJsonLdForRoute(route, 'it'))
     const ssrFallback = ssrFallbackFor(route)
@@ -287,7 +290,7 @@ async function generateRoute(route, baseHtml) {
         .replace(/<meta\s+property="og:[^"]+"[^>]*>/g, '')
         .replace(/<meta\s+name="twitter:[^"]+"[^>]*>/g, '')
         .replace(/<\/head>/, `${head}\n    ${jsonLd}\n</head>`)
-        .replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root"></div>\n${ssrFallback}\n${noscript}`)
+        .replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${ssrFallback}</div>\n${noscript}`)
 
     const outDir = route.path === '/' ? BUILD_DIR : path.join(BUILD_DIR, ...route.path.split('/').filter(Boolean))
     await ensureDir(outDir)
@@ -321,7 +324,8 @@ async function generateLanding(route, baseHtml) {
         canonical: absUrl(route.path),
         image: SITE.defaultImageAbsolute,
         noindex: false,
-        language: route.lang
+        language: route.lang,
+        alternates: alternateUrlsForPath(route.path)
     })
     const jsonLdBlocks = [
         defaultSiteJsonLd(),
@@ -333,7 +337,7 @@ async function generateLanding(route, baseHtml) {
     ]
     const jsonLd = jsonLdScripts(jsonLdBlocks)
     const block = noscriptLandingBlock(route)
-    const ssrFallback = `<div id="ssr-fallback" aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+    const ssrFallback = `<div id="ssr-fallback" data-prerender-fallback>
 <section lang="${route.lang}">${block}</section>
 </div>`
     const noscript = `<noscript>${block}</noscript>`
@@ -347,7 +351,7 @@ async function generateLanding(route, baseHtml) {
         .replace(/<meta\s+property="og:[^"]+"[^>]*>/g, '')
         .replace(/<meta\s+name="twitter:[^"]+"[^>]*>/g, '')
         .replace(/<\/head>/, `${head}\n    ${jsonLd}\n</head>`)
-        .replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root"></div>\n${ssrFallback}\n${noscript}`)
+        .replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${ssrFallback}</div>\n${noscript}`)
 
     const outDir = path.join(BUILD_DIR, ...route.path.split('/').filter(Boolean))
     await ensureDir(outDir)

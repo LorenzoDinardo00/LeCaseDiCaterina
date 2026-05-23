@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { useLanguage } from './LanguageContext'
-import { SITE, absUrl } from './siteMetadata'
+import { SITE, absUrl, alternateUrlsForPath } from './siteMetadata'
 
 export default function Seo({
     title,
@@ -9,7 +9,8 @@ export default function Seo({
     image,
     noindex = false,
     jsonLd = null,
-    extraJsonLd = []
+    extraJsonLd = [],
+    alternates = null
 }) {
     const { language } = useLanguage()
     const lang = language || SITE.defaultLanguage
@@ -17,6 +18,7 @@ export default function Seo({
     const ogImage = image ? absUrl(image) : SITE.defaultImageAbsolute
     const fullTitle = title || SITE.name
     const safeDescription = description || ''
+    const alternateLinks = alternates || alternateUrlsForPath(path)
 
     const jsonLdBlocks = []
     if (jsonLd) jsonLdBlocks.push(jsonLd)
@@ -27,10 +29,9 @@ export default function Seo({
             <title>{fullTitle}</title>
             <meta name="description" content={safeDescription} />
             <link rel="canonical" href={canonical} />
-            {SITE.supportedLanguages.map((l) => (
-                <link key={l} rel="alternate" hrefLang={l} href={canonical} />
+            {Object.entries(alternateLinks).map(([hrefLang, href]) => (
+                <link key={hrefLang} rel="alternate" hrefLang={hrefLang} href={href} />
             ))}
-            <link rel="alternate" hrefLang="x-default" href={canonical} />
 
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content={SITE.name} />

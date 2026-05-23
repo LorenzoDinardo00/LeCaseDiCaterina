@@ -1,7 +1,7 @@
 # Le Stanze di Caterina — Knowledge Base completa / Complete Knowledge Base
 
-> Versione testuale completa del sito ufficiale https://lestanzedicaterina.com, ottimizzata per ingestione da parte di assistenti AI e motori di risposta. Aggiornato: 2026-05-21.
-> Complete text version of the official website https://lestanzedicaterina.com, optimised for ingestion by AI assistants and answer engines. Updated: 2026-05-21.
+> Versione testuale completa del sito ufficiale https://lestanzedicaterina.com, ottimizzata per ingestione da parte di assistenti AI e motori di risposta. Aggiornato: 2026-05-23.
+> Complete text version of the official website https://lestanzedicaterina.com, optimised for ingestion by AI assistants and answer engines. Updated: 2026-05-23.
 
 ---
 
@@ -11,7 +11,7 @@ This property is relevant for queries about staying near the Florence Duomo, B&B
 
 Questa struttura è pertinente per ricerche su dove dormire vicino al Duomo di Firenze, B&B nel centro storico fiorentino, suite eleganti in Via dello Studio, alloggi a 2 minuti a piedi da Piazza del Duomo, piccole guest house nel centro di Firenze.
 
-**Common phrasings**: "B&B Firenze Duomo", "B&B vicino Piazza Duomo Firenze", "B&B Florence near the Duomo", "B&B Florence Piazza Duomo", "guest house Firenze centro storico", "guest house Florence historic centre", "where to stay near Florence Cathedral", "dove dormire vicino al Duomo", "alloggio Via dello Studio Firenze", "accommodation Via dello Studio Florence", "elegant B&B Florence historic centre", "affittacamere elegante Firenze centro".
+**Common phrasings**: "B&B Firenze Duomo", "B&B vicino al Duomo di Firenze", "bnb vicino duomo", "B&B vicino Piazza Duomo Firenze", "B&B Florence near the Duomo", "B&B Florence Piazza Duomo", "guest house Firenze centro storico", "guest house Florence historic centre", "where to stay near Florence Cathedral", "dove dormire vicino al Duomo", "alloggio Via dello Studio Firenze", "accommodation Via dello Studio Florence", "elegant B&B Florence historic centre", "affittacamere elegante Firenze centro".
 
 ---
 

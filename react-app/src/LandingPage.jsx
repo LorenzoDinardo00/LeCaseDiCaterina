@@ -1,17 +1,19 @@
 import { useEffect } from 'react'
-import { Link, useParams, useNavigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { Navbar, Footer } from './App'
 import { useLanguage } from './LanguageContext'
 import Seo from './Seo'
 import { LANDING_ROUTES, ROOMS, SITE, defaultSiteJsonLd, breadcrumbJsonLd, faqJsonLd } from './siteMetadata'
 
 export default function LandingPage() {
-    const { slug } = useParams()
     const location = useLocation()
     const navigate = useNavigate()
     const { setLanguage } = useLanguage()
 
     const route = LANDING_ROUTES.find((r) => r.path === location.pathname)
+    const relatedRoutes = route
+        ? LANDING_ROUTES.filter((r) => r.lang === route.lang && r.path !== route.path)
+        : []
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -32,8 +34,17 @@ export default function LandingPage() {
             heading: route.h1,
             visitSite: 'Visit the official website',
             visitSiteShort: 'Go to the official site',
+            bookNow: 'Book now',
             roomsTitle: 'The three suites',
             roomsIntro: 'Le Stanze di Caterina offers three themed suites, each up to 2 guests, with private bathroom, Wi-Fi, air conditioning, Smart TV, minibar and safe.',
+            factsTitle: 'Why it matches this search',
+            facts: [
+                '50 metres from Piazza del Duomo',
+                '2 minutes on foot from Florence Cathedral',
+                'Inside the historic centre ZTL',
+                'Three suites with private bathrooms'
+            ],
+            relatedTitle: 'Related searches',
             contactTitle: 'Contact and booking',
             contactBody: 'Bookings are handled through the external Xenion booking engine. For information, special requests or to verify availability you can contact us directly:',
             email: 'Email',
@@ -45,8 +56,17 @@ export default function LandingPage() {
             heading: route.h1,
             visitSite: 'Vai al sito ufficiale',
             visitSiteShort: 'Vai al sito ufficiale',
+            bookNow: 'Prenota ora',
             roomsTitle: 'Le tre suite',
             roomsIntro: 'Le Stanze di Caterina offre tre suite a tema, ognuna fino a 2 ospiti, con bagno privato, Wi-Fi, aria condizionata, Smart TV, minibar e cassaforte.',
+            factsTitle: 'Perché risponde a questa ricerca',
+            facts: [
+                '50 metri da Piazza del Duomo',
+                '2 minuti a piedi dalla Cattedrale di Firenze',
+                'Dentro la ZTL del centro storico',
+                'Tre suite con bagno privato'
+            ],
+            relatedTitle: 'Ricerche correlate',
             contactTitle: 'Contatti e prenotazioni',
             contactBody: 'Le prenotazioni sono gestite tramite il motore esterno Xenion. Per informazioni, richieste speciali o per verificare la disponibilità puoi contattarci direttamente:',
             email: 'Email',
@@ -76,7 +96,8 @@ export default function LandingPage() {
                     <span className="landing-badge">{labels.badge}</span>
                     <h1>{route.h1}</h1>
                     <div className="landing-cta-top">
-                        <Link to="/" className="btn-landing-primary">{labels.visitSite}</Link>
+                        <Link to="/prenota" className="btn-landing-primary">{labels.bookNow}</Link>
+                        <Link to="/" className="btn-landing-secondary">{labels.visitSite}</Link>
                     </div>
                 </div>
             </header>
@@ -86,6 +107,15 @@ export default function LandingPage() {
                     {route.intro.map((p, i) => (
                         <p key={i} className="landing-paragraph">{p}</p>
                     ))}
+
+                    <section className="landing-facts" aria-labelledby="landing-facts-title">
+                        <h2 id="landing-facts-title">{labels.factsTitle}</h2>
+                        <ul>
+                            {labels.facts.map((fact) => (
+                                <li key={fact}>{fact}</li>
+                            ))}
+                        </ul>
+                    </section>
 
                     <section className="landing-rooms">
                         <h2>{labels.roomsTitle}</h2>
@@ -116,9 +146,25 @@ export default function LandingPage() {
                         </ul>
                     </section>
 
+                    {relatedRoutes.length > 0 && (
+                        <section className="landing-related">
+                            <h2>{labels.relatedTitle}</h2>
+                            <ul>
+                                {relatedRoutes.map((related) => (
+                                    <li key={related.path}>
+                                        <Link to={related.path}>{related.h1}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
+
                     <section className="landing-cta-bottom">
                         <h2>{route.bottomQuestion}</h2>
-                        <Link to="/" className="btn-landing-primary">{labels.visitSiteShort}</Link>
+                        <div className="landing-cta-bottom-actions">
+                            <Link to="/prenota" className="btn-landing-primary">{labels.bookNow}</Link>
+                            <Link to="/" className="btn-landing-secondary">{labels.visitSiteShort}</Link>
+                        </div>
                     </section>
                 </div>
             </article>

@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://lestanzedicaterina.com/</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="it" href="https://lestanzedicaterina.com/" />
@@ -12,80 +12,98 @@
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/galleria</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/stanza/camera-spagnola</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/stanza/camera-italiana</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/stanza/camera-francese</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/faq</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/ai/knowledge</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/ai/faq</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/firenze/bnb-vicino-duomo</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://lestanzedicaterina.com/firenze/bnb-vicino-duomo" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lestanzedicaterina.com/florence/bnb-near-duomo" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lestanzedicaterina.com/firenze/bnb-vicino-duomo" />
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/firenze/dove-dormire-centro-firenze</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://lestanzedicaterina.com/firenze/dove-dormire-centro-firenze" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lestanzedicaterina.com/florence/where-to-stay-florence-centre" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lestanzedicaterina.com/firenze/dove-dormire-centro-firenze" />
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/firenze/alloggi-piazza-duomo</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://lestanzedicaterina.com/firenze/alloggi-piazza-duomo" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lestanzedicaterina.com/florence/accommodation-near-duomo" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lestanzedicaterina.com/firenze/alloggi-piazza-duomo" />
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/florence/bnb-near-duomo</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://lestanzedicaterina.com/firenze/bnb-vicino-duomo" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lestanzedicaterina.com/florence/bnb-near-duomo" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lestanzedicaterina.com/firenze/bnb-vicino-duomo" />
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/florence/where-to-stay-florence-centre</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://lestanzedicaterina.com/firenze/dove-dormire-centro-firenze" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lestanzedicaterina.com/florence/where-to-stay-florence-centre" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lestanzedicaterina.com/firenze/dove-dormire-centro-firenze" />
     </url>
     <url>
         <loc>https://lestanzedicaterina.com/florence/accommodation-near-duomo</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>2026-05-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://lestanzedicaterina.com/firenze/alloggi-piazza-duomo" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lestanzedicaterina.com/florence/accommodation-near-duomo" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lestanzedicaterina.com/firenze/alloggi-piazza-duomo" />
     </url>
 </urlset>

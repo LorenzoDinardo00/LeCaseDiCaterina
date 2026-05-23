@@ -88,10 +88,27 @@ export function defaultSiteJsonLd() {
         '@type': 'BedAndBreakfast',
         '@id': SITE.baseUrl + '#lodging',
         name: SITE.name,
-        alternateName: ['B&B Le Stanze di Caterina', 'Le Stanze di Caterina Firenze'],
+        alternateName: [
+            'B&B Le Stanze di Caterina',
+            'Le Stanze di Caterina Firenze',
+            'B&B vicino al Duomo di Firenze',
+            'B&B Firenze Duomo',
+            'Bnb vicino Duomo Firenze',
+            'Guest house Florence Duomo'
+        ],
         description: 'B&B elegante a Firenze, in Via dello Studio 12 a 50 metri dal Duomo di Santa Maria del Fiore. Guest house elegante con tre suite di design nel centro storico fiorentino.',
         url: SITE.baseUrl,
         image: SITE.galleryImages,
+        slogan: 'Tre suite eleganti a 50 metri dal Duomo di Firenze',
+        keywords: [
+            'B&B Firenze Duomo',
+            'B&B vicino al Duomo di Firenze',
+            'bnb vicino duomo',
+            'B&B vicino Piazza Duomo Firenze',
+            'affittacamere elegante Firenze centro',
+            'guest house Florence near Duomo',
+            'accommodation near Piazza Duomo Florence'
+        ],
         telephone: SITE.phone,
         email: SITE.email,
         priceRange: '€€€',
@@ -354,12 +371,13 @@ export const PRERENDER_ROUTES = [
 ]
 
 // Landing page SEO mirate a query specifiche (IT su /firenze/*, EN su /florence/*).
-// Pagine indicizzabili con contenuto unico + CTA verso la home (no doorway / no auto-redirect).
+// Pagine indicizzabili con contenuto unico + CTA interne (no doorway / no auto-redirect).
 export const LANDING_ROUTES = [
     {
         path: '/firenze/bnb-vicino-duomo',
         slug: 'bnb-vicino-duomo',
         lang: 'it',
+        alternatePath: '/florence/bnb-near-duomo',
         title: 'B&B vicino al Duomo di Firenze — Le Stanze di Caterina, Via dello Studio 12',
         description: 'Cerchi un B&B vicino al Duomo di Firenze? Le Stanze di Caterina si trovano in Via dello Studio 12, a 50 metri da Piazza del Duomo. Tre suite eleganti nel centro storico.',
         h1: 'B&B vicino al Duomo di Firenze',
@@ -374,6 +392,7 @@ export const LANDING_ROUTES = [
         path: '/firenze/dove-dormire-centro-firenze',
         slug: 'dove-dormire-centro-firenze',
         lang: 'it',
+        alternatePath: '/florence/where-to-stay-florence-centre',
         title: 'Dove dormire nel centro di Firenze — B&B Le Stanze di Caterina',
         description: 'Dove dormire nel centro storico di Firenze? Le Stanze di Caterina è un B&B elegante in Via dello Studio 12, a 50 metri dal Duomo. Tre suite di design.',
         h1: 'Dove dormire nel centro storico di Firenze',
@@ -388,6 +407,7 @@ export const LANDING_ROUTES = [
         path: '/firenze/alloggi-piazza-duomo',
         slug: 'alloggi-piazza-duomo',
         lang: 'it',
+        alternatePath: '/florence/accommodation-near-duomo',
         title: 'Alloggi vicino a Piazza del Duomo a Firenze — Le Stanze di Caterina',
         description: 'Cerchi un alloggio vicino a Piazza del Duomo a Firenze? Le Stanze di Caterina è un B&B in Via dello Studio 12, a 50 m da Piazza Duomo. Tre suite eleganti.',
         h1: 'Alloggi vicino a Piazza del Duomo a Firenze',
@@ -402,6 +422,7 @@ export const LANDING_ROUTES = [
         path: '/florence/bnb-near-duomo',
         slug: 'bnb-near-duomo',
         lang: 'en',
+        alternatePath: '/firenze/bnb-vicino-duomo',
         title: 'B&B near the Duomo in Florence — Le Stanze di Caterina, Via dello Studio',
         description: 'Looking for a B&B near the Duomo in Florence? Le Stanze di Caterina is at Via dello Studio 12, 50 metres from Piazza del Duomo. Three elegant suites.',
         h1: 'B&B near the Duomo in Florence',
@@ -416,6 +437,7 @@ export const LANDING_ROUTES = [
         path: '/florence/where-to-stay-florence-centre',
         slug: 'where-to-stay-florence-centre',
         lang: 'en',
+        alternatePath: '/firenze/dove-dormire-centro-firenze',
         title: 'Where to stay in Florence centre — B&B Le Stanze di Caterina',
         description: 'Where to stay in the Florence historic centre? Le Stanze di Caterina is an elegant B&B at Via dello Studio 12, 50 metres from the Duomo. Three design suites.',
         h1: 'Where to stay in the historic centre of Florence',
@@ -430,6 +452,7 @@ export const LANDING_ROUTES = [
         path: '/florence/accommodation-near-duomo',
         slug: 'accommodation-near-duomo',
         lang: 'en',
+        alternatePath: '/firenze/alloggi-piazza-duomo',
         title: 'Accommodation near Piazza Duomo in Florence — Le Stanze di Caterina',
         description: 'Looking for accommodation near Piazza Duomo in Florence? Le Stanze di Caterina is a B&B at Via dello Studio 12, 50 metres from Piazza Duomo. Three elegant suites.',
         h1: 'Accommodation near Piazza del Duomo in Florence',
@@ -441,3 +464,35 @@ export const LANDING_ROUTES = [
         bottomQuestion: 'Want to check availability and book?'
     }
 ]
+
+export function alternateUrlsForPath(path = '/') {
+    const route = LANDING_ROUTES.find((r) => r.path === path)
+    if (route?.alternatePath) {
+        const alternate = LANDING_ROUTES.find((r) => r.path === route.alternatePath)
+        const itPath = route.lang === 'it' ? route.path : alternate?.path
+        const enPath = route.lang === 'en' ? route.path : alternate?.path
+        const defaultPath = itPath || route.path
+
+        return {
+            it: absUrl(itPath || route.path),
+            en: absUrl(enPath || route.path),
+            'x-default': absUrl(defaultPath)
+        }
+    }
+
+    const canonical = absUrl(path)
+    return {
+        it: canonical,
+        en: canonical,
+        'x-default': canonical
+    }
+}
+
+export function landingLinksForLanguage(language = 'it') {
+    return LANDING_ROUTES
+        .filter((route) => route.lang === language)
+        .map((route) => ({
+            path: route.path,
+            label: route.h1
+        }))
+}

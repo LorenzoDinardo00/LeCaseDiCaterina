@@ -4,7 +4,7 @@ import { useLanguage } from './LanguageContext'
 import { useCookieConsent } from './ConsentManager'
 import { translations } from './translations'
 import Seo from './Seo'
-import { defaultSiteJsonLd, breadcrumbJsonLd, faqJsonLd, FAQ_DATA, PRERENDER_ROUTES, SITE } from './siteMetadata'
+import { defaultSiteJsonLd, breadcrumbJsonLd, faqJsonLd, FAQ_DATA, PRERENDER_ROUTES, SITE, landingLinksForLanguage } from './siteMetadata'
 import ConsentBanner from './ConsentBanner'
 import './styles.css'
 
@@ -653,6 +653,8 @@ function ContactSection() {
 function Footer() {
   const { language } = useLanguage()
   const t = translations[language].footer
+  const seoLinks = landingLinksForLanguage(language)
+  const seoHeading = language === 'en' ? 'Florence Guides' : 'Guide Firenze'
 
   const openPreferences = (e) => {
     e.preventDefault()
@@ -678,6 +680,14 @@ function Footer() {
               <li><a href="#" onClick={openPreferences}>{t.preferences}</a></li>
               <li><Link to="/privacy-policy">{t.privacy}</Link></li>
               <li><Link to="/cookie-policy">{t.cookie}</Link></li>
+            </ul>
+          </div>
+          <div className="footer-links footer-links--seo">
+            <h4>{seoHeading}</h4>
+            <ul>
+              {seoLinks.map((link) => (
+                <li key={link.path}><Link to={link.path}>{link.label}</Link></li>
+              ))}
             </ul>
           </div>
         </div>

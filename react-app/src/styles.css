@@ -1301,7 +1301,7 @@ img {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1.15fr;
     gap: 60px;
     padding-bottom: 48px;
     border-bottom: 1px solid rgba(250, 246, 241, 0.1);
@@ -1345,6 +1345,11 @@ img {
 
 .footer-links a:hover {
     color: var(--color-cream);
+}
+
+.footer-links--seo a {
+    font-size: 0.9rem;
+    line-height: 1.45;
 }
 
 .social-links {
@@ -3342,6 +3347,10 @@ img {
 
 .landing-cta-top {
     margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .btn-landing-primary {
@@ -3367,6 +3376,29 @@ img {
     box-shadow: 0 6px 22px rgba(107, 45, 53, 0.28);
 }
 
+.btn-landing-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 16px 30px;
+    background: transparent;
+    color: var(--color-burgundy);
+    border: 2px solid rgba(107, 45, 53, 0.22);
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.btn-landing-secondary:hover {
+    border-color: var(--color-burgundy);
+    background: var(--color-cream-light);
+    transform: translateY(-2px);
+}
+
 .landing-content {
     padding: 60px 0 80px;
 }
@@ -3387,13 +3419,50 @@ img {
 }
 
 .landing-rooms h2,
+.landing-facts h2,
 .landing-contact h2,
+.landing-related h2,
 .landing-cta-bottom h2 {
     font-family: var(--font-heading);
     font-size: clamp(1.5rem, 3vw, 1.9rem);
     font-weight: 600;
     color: var(--color-burgundy);
     margin: 0 0 14px;
+}
+
+.landing-facts {
+    margin-top: 38px;
+    padding: 26px 30px;
+    background: var(--color-cream-light);
+    border: 1px solid var(--color-cream-dark);
+    border-left: 4px solid var(--color-gold);
+}
+
+.landing-facts ul {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+}
+
+.landing-facts li {
+    color: var(--color-text-light);
+    line-height: 1.55;
+    padding-left: 18px;
+    position: relative;
+}
+
+.landing-facts li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 6px;
+    height: 6px;
+    background: var(--color-gold);
+    transform: rotate(45deg);
 }
 
 .landing-rooms-intro {
@@ -3504,6 +3573,32 @@ img {
     text-decoration: underline;
 }
 
+.landing-related {
+    margin-top: 42px;
+}
+
+.landing-related ul {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    display: grid;
+    gap: 12px;
+}
+
+.landing-related a {
+    display: block;
+    padding: 14px 18px;
+    background: rgba(255, 253, 249, 0.72);
+    border: 1px solid var(--color-cream-dark);
+    color: var(--color-burgundy);
+    font-weight: 500;
+}
+
+.landing-related a:hover {
+    border-color: rgba(107, 45, 53, 0.35);
+    background: var(--color-cream-light);
+}
+
 .landing-cta-bottom {
     margin-top: 56px;
     text-align: center;
@@ -3517,6 +3612,13 @@ img {
     margin-bottom: 22px;
 }
 
+.landing-cta-bottom-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
     .landing-hero {
         padding: 110px 0 50px;
@@ -3524,7 +3626,11 @@ img {
     .landing-rooms-grid {
         grid-template-columns: 1fr;
     }
+    .landing-facts ul {
+        grid-template-columns: 1fr;
+    }
     .landing-contact,
+    .landing-facts,
     .landing-cta-bottom {
         padding: 22px 20px;
     }
