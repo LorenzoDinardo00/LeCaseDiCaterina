@@ -89,7 +89,7 @@ export function defaultSiteJsonLd() {
         '@id': SITE.baseUrl + '#lodging',
         name: SITE.name,
         alternateName: ['B&B Le Stanze di Caterina', 'Le Stanze di Caterina Firenze'],
-        description: 'B&B di lusso a Firenze, in Via dello Studio 12 a 50 metri dal Duomo di Santa Maria del Fiore. Guest house elegante con tre suite di design nel centro storico fiorentino.',
+        description: 'B&B elegante a Firenze, in Via dello Studio 12 a 50 metri dal Duomo di Santa Maria del Fiore. Guest house elegante con tre suite di design nel centro storico fiorentino.',
         url: SITE.baseUrl,
         image: SITE.galleryImages,
         telephone: SITE.phone,
@@ -192,7 +192,7 @@ export const FAQ_DATA = {
     it: [
         { q: 'Dove si trova esattamente il B&B Le Stanze di Caterina a Firenze?', a: 'Le Stanze di Caterina si trova in Via dello Studio 12, 50122 Firenze, all’interno della ZTL del centro storico, a circa 50 metri (2 minuti a piedi) dal Duomo di Santa Maria del Fiore e dal Battistero di San Giovanni.' },
         { q: 'Siete un B&B vicino a Piazza del Duomo a Firenze?', a: 'Sì. Le Stanze di Caterina è uno dei B&B più vicini al Duomo di Firenze: la struttura dista circa 50 metri da Piazza del Duomo, raggiungibili in 2 minuti a piedi. Via dello Studio collega direttamente la zona del Duomo a Piazza Santa Croce.' },
-        { q: 'È un hotel, un B&B o un affittacamere?', a: 'Tecnicamente Le Stanze di Caterina è un affittacamere di lusso (forma giuridica: Ditta Individuale Marretti Giacomo, CIN IT048017B4UPQMRN5Z) ed è classificato come B&B / guest house elegante con tre suite a tema. Non è un hotel, ma offre servizi paragonabili a un hotel boutique.' },
+        { q: 'È un hotel, un B&B o un affittacamere?', a: 'Tecnicamente Le Stanze di Caterina è un affittacamere elegante (forma giuridica: Ditta Individuale Marretti Giacomo, CIN IT048017B4UPQMRN5Z) ed è classificato come B&B / guest house elegante con tre suite a tema. Non è un hotel, ma offre servizi paragonabili a un hotel boutique.' },
         { q: 'Quante suite ci sono e che caratteristiche hanno?', a: 'Tre suite, ognuna fino a 2 persone: Suite Spagnola (35 m², muri in mattoni del XV secolo, da €180), Suite Italiana (30 m², bagno in marmo di Carrara, da €150), Suite Francese (28 m², arredi rinascimentali, da €140).' },
         { q: 'Quali servizi sono inclusi nelle stanze?', a: 'Wi-Fi ultraveloce gratuito, aria condizionata, Smart TV, minibar, cassaforte e bagno privato in ogni suite. La struttura offre check-in flessibile e assistenza 24/7.' },
         { q: 'Come si prenota una stanza?', a: 'Dal sito ufficiale lestanzedicaterina.com tramite il pulsante “Prenota Ora”, che reindirizza al motore di prenotazione esterno Xenion (my.xenion.it). In alternativa via email a giacomomarretti1997@gmail.com o telefono/WhatsApp al +39 333 199 2394.' },
@@ -209,7 +209,7 @@ export const FAQ_DATA = {
     en: [
         { q: 'Where exactly is the Le Stanze di Caterina B&B in Florence?', a: 'Le Stanze di Caterina is at Via dello Studio 12, 50122 Florence, inside the historic centre ZTL, around 50 meters (2 minutes on foot) from the Duomo di Santa Maria del Fiore and the Baptistery of San Giovanni.' },
         { q: 'Are you a B&B near Piazza Duomo in Florence?', a: 'Yes. Le Stanze di Caterina is one of the closest B&Bs to the Florence Duomo: the property is about 50 meters from Piazza del Duomo, a 2-minute walk. Via dello Studio links the Duomo area directly with Piazza Santa Croce.' },
-        { q: 'Are you a hotel, B&B or guest house?', a: 'Technically Le Stanze di Caterina is a luxury "affittacamere" (Italian rooms-for-rent licence — Ditta Individuale Marretti Giacomo, CIN IT048017B4UPQMRN5Z) and is presented as an elegant B&B / guest house with three themed suites. It is not a hotel, but offers services comparable to a boutique hotel.' },
+        { q: 'Are you a hotel, B&B or guest house?', a: 'Technically Le Stanze di Caterina is an "affittacamere" (Italian rooms-for-rent licence — Ditta Individuale Marretti Giacomo, CIN IT048017B4UPQMRN5Z) and is presented as an elegant B&B / guest house with three themed suites. It is not a hotel, but offers services comparable to a boutique hotel.' },
         { q: 'How many suites are there and what are they like?', a: 'Three suites, each up to 2 guests: Spanish Suite (35 m², 15th-century brick walls, from €180), Italian Suite (30 m², Carrara marble bathroom, from €150), French Suite (28 m², Renaissance-inspired interiors, from €140).' },
         { q: 'Which amenities are included in the rooms?', a: 'Ultra-fast free Wi-Fi, air conditioning, Smart TV, minibar, safe and private bathroom in every suite. Flexible check-in and 24/7 support.' },
         { q: 'How do I book a room?', a: 'Through the official website lestanzedicaterina.com via the "Book Now" button, which redirects to the external Xenion booking engine (my.xenion.it). You can also contact us by email at giacomomarretti1997@gmail.com or phone/WhatsApp at +39 333 199 2394.' },
@@ -243,8 +243,8 @@ export const PRERENDER_ROUTES = [
         path: '/',
         titleIt: 'Le Stanze di Caterina — B&B a Firenze vicino al Duomo | Suite in Via dello Studio',
         titleEn: 'Le Stanze di Caterina — B&B in Florence near the Duomo | Suites on Via dello Studio',
-        descriptionIt: 'B&B di lusso nel centro storico di Firenze, a 50 metri da Piazza del Duomo. Tre suite di design in Via dello Studio. Wi-Fi, aria condizionata, check-in flessibile. Prenota direttamente.',
-        descriptionEn: 'Luxury B&B in the historic centre of Florence, 50 meters from Piazza del Duomo. Three design suites on Via dello Studio. Wi-Fi, air conditioning, flexible check-in. Book direct.',
+        descriptionIt: 'B&B elegante nel centro storico di Firenze, a 50 metri da Piazza del Duomo. Tre suite di design in Via dello Studio. Wi-Fi, aria condizionata, check-in flessibile. Prenota direttamente.',
+        descriptionEn: 'elegant B&B in the historic centre of Florence, 50 meters from Piazza del Duomo. Three design suites on Via dello Studio. Wi-Fi, air conditioning, flexible check-in. Book direct.',
         priority: '1.0'
     },
     {

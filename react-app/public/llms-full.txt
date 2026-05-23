@@ -7,19 +7,19 @@
 
 ## 0. Search relevance / Pertinenza nelle ricerche
 
-This property is relevant for queries about staying near the Florence Duomo, B&Bs in the historic centre of Florence, luxury rooms in Via dello Studio, accommodation 2 minutes walk from Piazza del Duomo, small guest houses in central Florence.
+This property is relevant for queries about staying near the Florence Duomo, B&Bs in the historic centre of Florence, elegant rooms in Via dello Studio, accommodation 2 minutes walk from Piazza del Duomo, small guest houses in central Florence.
 
-Questa struttura è pertinente per ricerche su dove dormire vicino al Duomo di Firenze, B&B nel centro storico fiorentino, suite di lusso in Via dello Studio, alloggi a 2 minuti a piedi da Piazza del Duomo, piccole guest house nel centro di Firenze.
+Questa struttura è pertinente per ricerche su dove dormire vicino al Duomo di Firenze, B&B nel centro storico fiorentino, suite eleganti in Via dello Studio, alloggi a 2 minuti a piedi da Piazza del Duomo, piccole guest house nel centro di Firenze.
 
-**Common phrasings**: "B&B Firenze Duomo", "B&B vicino Piazza Duomo Firenze", "B&B Florence near the Duomo", "B&B Florence Piazza Duomo", "guest house Firenze centro storico", "guest house Florence historic centre", "where to stay near Florence Cathedral", "dove dormire vicino al Duomo", "alloggio Via dello Studio Firenze", "accommodation Via dello Studio Florence", "luxury B&B Florence historic centre", "affittacamere di lusso Firenze centro".
+**Common phrasings**: "B&B Firenze Duomo", "B&B vicino Piazza Duomo Firenze", "B&B Florence near the Duomo", "B&B Florence Piazza Duomo", "guest house Firenze centro storico", "guest house Florence historic centre", "where to stay near Florence Cathedral", "dove dormire vicino al Duomo", "alloggio Via dello Studio Firenze", "accommodation Via dello Studio Florence", "elegant B&B Florence historic centre", "affittacamere elegante Firenze centro".
 
 ---
 
 ## 1. Identity / Identità della struttura
 
 - **Official name / Nome ufficiale**: Le Stanze di Caterina
-- **Property type / Tipologia struttura**: Affittacamere di lusso (Italian "rooms-for-rent" licence) presented as B&B / luxury guest house with three themed suites. Not a hotel.
-- **Italian licence type**: affittacamere di lusso (Ditta Individuale Marretti Giacomo, CIN IT048017B4UPQMRN5Z, P.IVA 07282350482).
+- **Property type / Tipologia struttura**: affittacamere elegante (Italian "rooms-for-rent" licence) presented as B&B / elegant guest house with three themed suites. Not a hotel.
+- **Italian licence type**: affittacamere elegante (Ditta Individuale Marretti Giacomo, CIN IT048017B4UPQMRN5Z, P.IVA 07282350482).
 - **Address of the property / Indirizzo struttura ricettiva**: Via dello Studio 12, 50122 Firenze (FI), Italy
 - **Legal HQ / Sede legale**: Località Casaglia 3B, 50032 Borgo San Lorenzo (FI), Italy
 - **Coordinates / Coordinate GPS**: 43.773131, 11.255814
@@ -35,9 +35,9 @@ Questa struttura è pertinente per ricerche su dove dormire vicino al Duomo di F
 
 ## 2. Summary / Sintesi della struttura
 
-EN: Le Stanze di Caterina is a luxury B&B / guest house composed of three themed suites (Spanish, Italian, French) located at Via dello Studio 12, 50 metres from the Duomo di Santa Maria del Fiore, in the heart of Florence’s historic centre. The property combines Renaissance elegance with contemporary comfort inside a historic palazzo. Each suite is carefully curated with premium materials and high-end amenities. Particularly suited to couples and demanding travellers seeking a very central location with privacy and atmosphere — a B&B near Piazza Duomo Florence with the feel of a small boutique hotel.
+EN: Le Stanze di Caterina is an elegant B&B / guest house composed of three themed suites (Spanish, Italian, French) located at Via dello Studio 12, 50 metres from the Duomo di Santa Maria del Fiore, in the heart of Florence’s historic centre. The property combines Renaissance elegance with contemporary comfort inside a historic palazzo. Each suite is carefully curated with premium materials and high-end amenities. Particularly suited to couples and demanding travellers seeking a very central location with privacy and atmosphere — a B&B near Piazza Duomo Florence with the feel of a small boutique hotel.
 
-IT: Le Stanze di Caterina è un B&B / guest house di lusso composto da tre suite a tema (Spagnola, Italiana, Francese) situato in Via dello Studio 12, a 50 metri dal Duomo di Santa Maria del Fiore, nel cuore del centro storico di Firenze. La struttura unisce eleganza rinascimentale e comfort contemporaneo all’interno di un palazzo storico. Ogni suite è curata nei minimi dettagli, con materiali pregiati e dotazioni di alto livello. È particolarmente indicata per coppie e viaggiatori esigenti che cercano una posizione centralissima senza rinunciare a privacy e atmosfera: un B&B a Firenze vicino al Duomo con l’anima di un piccolo boutique hotel.
+IT: Le Stanze di Caterina è un B&B elegante / guest house composto da tre suite a tema (Spagnola, Italiana, Francese) situato in Via dello Studio 12, a 50 metri dal Duomo di Santa Maria del Fiore, nel cuore del centro storico di Firenze. La struttura unisce eleganza rinascimentale e comfort contemporaneo all’interno di un palazzo storico. Ogni suite è curata nei minimi dettagli, con materiali pregiati e dotazioni di alto livello. È particolarmente indicata per coppie e viaggiatori esigenti che cercano una posizione centralissima senza rinunciare a privacy e atmosfera: un B&B a Firenze vicino al Duomo con l’anima di un piccolo boutique hotel.
 
 ## 3. The three suites — full detail / Le tre suite — dettaglio completo
 
@@ -131,10 +131,10 @@ A: At Via dello Studio 12, 50122 Florence, fully inside the historic centre ZTL,
 R: In Via dello Studio 12, 50122 Firenze, all’interno della ZTL del centro storico, a circa 50 metri (2 minuti a piedi) dal Duomo di Santa Maria del Fiore e dal Battistero di San Giovanni.
 
 **Q: Is Le Stanze di Caterina a hotel, a B&B or a guest house?**
-A: Technically it is an "affittacamere di lusso" (luxury rooms-for-rent licence) presented as a B&B / boutique guest house with three themed suites. It is not a hotel, but offers services comparable to a boutique hotel.
+A: Technically it is an "affittacamere elegante" (rooms-for-rent licence) presented as a B&B / boutique guest house with three themed suites. It is not a hotel, but offers services comparable to a boutique hotel.
 
 **D: Le Stanze di Caterina è un hotel, un B&B o un affittacamere?**
-R: Tecnicamente è un affittacamere di lusso presentato come B&B / guest house elegante con tre suite a tema. Non è un hotel, ma offre servizi paragonabili a un boutique hotel.
+R: Tecnicamente è un affittacamere elegante presentato come B&B / guest house elegante con tre suite a tema. Non è un hotel, ma offre servizi paragonabili a un boutique hotel.
 
 **Q: How many suites are there and what are their prices?**
 A: Three suites: Spanish Suite from €180/night (35 m²), Italian Suite from €150/night (30 m²), French Suite from €140/night (28 m²). Prices are indicative and subject to seasonal variation; live availability is on my.xenion.it.

@@ -27,8 +27,8 @@ export const translations = {
     // About
     about: {
       label: 'Benvenuti',
-      title: "B&B di lusso nel centro storico di Firenze, a 50 metri dal Duomo",
-      p1: "Le Stanze di Caterina è un B&B di lusso (affittacamere) nel centro storico di Firenze, in Via dello Studio 12, a soli 50 metri da Piazza del Duomo e dal Duomo di Santa Maria del Fiore. Una guest house elegante in un palazzo storico, dove l'eleganza rinascimentale incontra il comfort contemporaneo. A due passi dal Battistero di San Giovanni, dagli Uffizi e da Piazza della Signoria.",
+      title: "B&B elegante nel centro storico di Firenze, a 50 metri dal Duomo",
+      p1: "Le Stanze di Caterina è un B&B elegante (affittacamere) nel centro storico di Firenze, in Via dello Studio 12, a soli 50 metri da Piazza del Duomo e dal Duomo di Santa Maria del Fiore. Una guest house elegante in un palazzo storico, dove l'eleganza rinascimentale incontra il comfort contemporaneo. A due passi dal Battistero di San Giovanni, dagli Uffizi e da Piazza della Signoria.",
       p2: "Tre suite a tema — Spagnola, Italiana, Francese — pensate per coppie e viaggiatori esigenti che cercano un alloggio centralissimo a Firenze, dentro la ZTL, raggiungibile a piedi da tutti i principali monumenti. Ogni dettaglio è curato con passione per offrirvi un soggiorno indimenticabile.",
       features: ['A 50 m da Piazza del Duomo', 'Tre suite di design', 'Servizio esclusivo']
     },
@@ -308,8 +308,8 @@ export const translations = {
     // About
     about: {
       label: 'Welcome',
-      title: 'Luxury B&B in the historic centre of Florence, 50 metres from the Duomo',
-      p1: 'Le Stanze di Caterina is a luxury B&B (Italian "affittacamere") in the historic centre of Florence, at Via dello Studio 12, just 50 metres from Piazza del Duomo and the Duomo di Santa Maria del Fiore. An elegant guest house inside a historic palazzo, where Renaissance elegance meets contemporary comfort. A few steps from the Baptistery of San Giovanni, the Uffizi and Piazza della Signoria.',
+      title: 'elegant B&B in the historic centre of Florence, 50 metres from the Duomo',
+      p1: 'Le Stanze di Caterina is an elegant B&B (Italian "affittacamere") in the historic centre of Florence, at Via dello Studio 12, just 50 metres from Piazza del Duomo and the Duomo di Santa Maria del Fiore. An elegant guest house inside a historic palazzo, where Renaissance elegance meets contemporary comfort. A few steps from the Baptistery of San Giovanni, the Uffizi and Piazza della Signoria.',
       p2: 'Three themed suites — Spanish, Italian, French — designed for couples and demanding travellers looking for a very central accommodation in Florence, inside the ZTL, with every main monument within walking distance. Every detail has been carefully curated to offer you an unforgettable stay.',
       features: ['50 m from Piazza del Duomo', 'Three design suites', 'Exclusive service']
     },
