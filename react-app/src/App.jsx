@@ -538,12 +538,11 @@ function LocationSection() {
   )
 }
 
-// FAQ in home: 8 Q&A in accordion. Buona indicizzazione + materiale per AI.
+// FAQ in home: 8 Q&A sempre aperte (no accordion). Massimo contenuto leggibile da utenti, Google e AI.
 function HomeFaqSection() {
   const { language } = useLanguage()
   const lang = language || 'it'
   const items = (FAQ_DATA[lang] || FAQ_DATA.it).slice(0, 8)
-  const [openIndex, setOpenIndex] = useState(0)
 
   const heading = lang === 'en' ? 'Frequently Asked Questions' : 'Domande Frequenti'
   const subheading = lang === 'en'
@@ -558,26 +557,13 @@ function HomeFaqSection() {
         <div className="separator"></div>
         <p className="home-faq-intro">{subheading}</p>
 
-        <div className="home-faq-list">
-          {items.map((item, idx) => {
-            const open = openIndex === idx
-            return (
-              <div key={idx} className={`faq-item ${open ? 'open' : ''}`}>
-                <button
-                  type="button"
-                  className="faq-question"
-                  aria-expanded={open}
-                  onClick={() => setOpenIndex(open ? -1 : idx)}
-                >
-                  <span>{item.q}</span>
-                  <span className="faq-toggle" aria-hidden="true">{open ? '−' : '+'}</span>
-                </button>
-                <div className="faq-answer" role="region">
-                  <p>{item.a}</p>
-                </div>
-              </div>
-            )
-          })}
+        <div className="home-faq-list home-faq-list--open">
+          {items.map((item, idx) => (
+            <article key={idx} className="home-faq-block">
+              <h3 className="home-faq-q">{item.q}</h3>
+              <p className="home-faq-a">{item.a}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

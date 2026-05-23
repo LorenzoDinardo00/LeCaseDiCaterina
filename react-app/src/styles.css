@@ -3348,6 +3348,49 @@ img {
     border: 1px solid var(--color-cream-dark);
 }
 
+.home-faq-list--open {
+    padding: 28px 36px;
+}
+
+.home-faq-block {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--color-cream-dark);
+}
+
+.home-faq-block:last-child {
+    border-bottom: none;
+    padding-bottom: 6px;
+}
+
+.home-faq-block:first-child {
+    padding-top: 6px;
+}
+
+.home-faq-q {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--color-burgundy);
+    margin: 0 0 10px;
+    line-height: 1.35;
+}
+
+.home-faq-a {
+    color: var(--color-text-light);
+    line-height: 1.75;
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .home-faq-list--open {
+        padding: 20px 22px;
+    }
+    .home-faq-q {
+        font-size: 1.05rem;
+    }
+}
+
 .home-faq-cta {
     text-align: center;
     margin-top: 28px;
