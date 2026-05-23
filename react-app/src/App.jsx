@@ -689,7 +689,6 @@ function Footer() {
               <li><a href="#about">{translations[language].nav.about}</a></li>
               <li><a href="#rooms">{translations[language].nav.rooms}</a></li>
               <li><a href="#contact">{translations[language].nav.contact}</a></li>
-              <li><Link to="/faq">{language === 'en' ? 'FAQ' : 'FAQ'}</Link></li>
               <li><a href="#" onClick={openPreferences}>{t.preferences}</a></li>
               <li><Link to="/privacy-policy">{t.privacy}</Link></li>
               <li><Link to="/cookie-policy">{t.cookie}</Link></li>
