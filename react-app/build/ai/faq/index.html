@@ -56,6 +56,11 @@
       --font-primary: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
       --font-secondary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     }
+
+    /* Prevent prerendered SEO fallback text from flashing before React mounts. */
+    [data-prerender-fallback] {
+      display: none !important;
+    }
   </style>
   <script type="module" crossorigin src="/assets/index-Byqu-e_d.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-BaRtWCBt.css">
