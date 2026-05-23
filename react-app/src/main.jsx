@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import { LanguageProvider } from './LanguageContext'
 import { CookieConsentProvider } from './ConsentManager'
 import ErrorBoundary from './ErrorBoundary'
@@ -10,6 +11,8 @@ import RoomPage from './RoomPage.jsx'
 import BookingPage from './BookingPage.jsx'
 import PrivacyPolicy from './LegalPrivacy.jsx'
 import CookiePolicy from './LegalCookies.jsx'
+import FaqPage from './FaqPage.jsx'
+import AIKnowledgePage from './AIKnowledgePage.jsx'
 import './gallery.css'
 import './room.css'
 
@@ -19,7 +22,6 @@ if (typeof window !== 'undefined') {
     localStorage.setItem('test', 'test')
     localStorage.removeItem('test')
   } catch (e) {
-    // localStorage is blocked, create a memory-only polyfill
     console.warn('localStorage is blocked, using in-memory storage')
     const memoryStorage = {}
     Object.defineProperty(window, 'localStorage', {
@@ -36,31 +38,34 @@ if (typeof window !== 'undefined') {
   }
 }
 
-// Wrap the entire app initialization in try-catch for maximum safety
 try {
   createRoot(document.getElementById('root')).render(
     <StrictMode>
       <ErrorBoundary>
-        <LanguageProvider>
-          <CookieConsentProvider>
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={<App />} />
-                <Route path="/galleria" element={<GalleryPage />} />
-                <Route path="/stanza/:roomId" element={<RoomPage />} />
-                <Route path="/prenota" element={<BookingPage />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/cookie-policy" element={<CookiePolicy />} />
-              </Routes>
-            </BrowserRouter>
-          </CookieConsentProvider>
-        </LanguageProvider>
+        <HelmetProvider>
+          <LanguageProvider>
+            <CookieConsentProvider>
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/" element={<App />} />
+                  <Route path="/galleria" element={<GalleryPage />} />
+                  <Route path="/stanza/:roomId" element={<RoomPage />} />
+                  <Route path="/prenota" element={<BookingPage />} />
+                  <Route path="/faq" element={<FaqPage />} />
+                  <Route path="/ai/knowledge" element={<AIKnowledgePage />} />
+                  <Route path="/ai/faq" element={<FaqPage isAiVariant />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/cookie-policy" element={<CookiePolicy />} />
+                </Routes>
+              </BrowserRouter>
+            </CookieConsentProvider>
+          </LanguageProvider>
+        </HelmetProvider>
       </ErrorBoundary>
     </StrictMode>,
   )
 } catch (error) {
   console.error('Failed to initialize app:', error)
-  // Show a basic fallback page if React fails to initialize
   document.getElementById('root').innerHTML = `
     <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #FAF6F1; font-family: Georgia, serif; padding: 20px; text-align: center;">
       <h1 style="color: #6B2D35; margin-bottom: 20px;">Le Stanze di Caterina</h1>

@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from './LanguageContext'
 import { translations } from './translations'
+import Seo from './Seo'
 
 const REDIRECT_SECONDS = 8
 
@@ -37,6 +38,12 @@ export default function BookingPage() {
 
     return (
         <div className="booking-bridge">
+            <Seo
+                title={language === 'en' ? 'Booking redirect — Le Stanze di Caterina' : 'Reindirizzamento prenotazione — Le Stanze di Caterina'}
+                description={language === 'en' ? 'Bridge page redirecting to the external Xenion booking engine.' : 'Pagina di reindirizzamento al motore di prenotazione esterno Xenion.'}
+                path="/prenota"
+                noindex
+            />
             <div className="booking-bridge-card">
                 <h1>{t.title}</h1>
                 <p className="booking-intro">{t.intro}</p>

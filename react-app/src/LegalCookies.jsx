@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar, Footer } from './App'
 import { useLanguage } from './LanguageContext'
 import { translations } from './translations'
+import Seo from './Seo'
 import './styles.css'
 
 function CookieTable({ rows, headers }) {
@@ -54,6 +55,12 @@ export default function CookiePolicy() {
 
     return (
         <>
+            <Seo
+                title={language === 'en' ? 'Cookie Policy — Le Stanze di Caterina' : 'Cookie Policy — Le Stanze di Caterina'}
+                description={language === 'en' ? 'Cookie policy of Le Stanze di Caterina.' : 'Cookie policy di Le Stanze di Caterina.'}
+                path="/cookie-policy"
+                noindex
+            />
             <Navbar />
             <div className="policy-page">
                 <div className="container">

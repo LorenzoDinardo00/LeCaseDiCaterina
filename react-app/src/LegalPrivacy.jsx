@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar, Footer } from './App'
 import { useLanguage } from './LanguageContext'
 import { translations } from './translations'
+import Seo from './Seo'
 import './styles.css'
 
 export default function PrivacyPolicy() {
@@ -15,6 +16,12 @@ export default function PrivacyPolicy() {
 
     return (
         <>
+            <Seo
+                title={language === 'en' ? 'Privacy Notice — Le Stanze di Caterina' : 'Privacy Policy — Le Stanze di Caterina'}
+                description={language === 'en' ? 'GDPR privacy notice of Le Stanze di Caterina.' : 'Informativa privacy GDPR di Le Stanze di Caterina.'}
+                path="/privacy-policy"
+                noindex
+            />
             <Navbar />
             <div className="policy-page">
                 <div className="container">

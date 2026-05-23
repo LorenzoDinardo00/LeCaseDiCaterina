@@ -4,6 +4,8 @@ import { Navbar } from './App'
 import { useLanguage } from './LanguageContext'
 import { useCookieConsent } from './ConsentManager'
 import { translations } from './translations'
+import Seo from './Seo'
+import { roomJsonLd, breadcrumbJsonLd, ROOMS } from './siteMetadata'
 
 // Room data with images only (text comes from translations)
 const roomsData = {
@@ -237,8 +239,34 @@ function RoomPage() {
             }))
     }
 
+    const roomMeta = ROOMS[roomId]
+    const seoTitle = roomMeta
+        ? (language === 'en'
+            ? `${roomMeta.nameEn} — Le Stanze di Caterina, Florence`
+            : `${roomMeta.nameIt} — Le Stanze di Caterina, Firenze`)
+        : 'Le Stanze di Caterina'
+    const seoDescription = roomMeta
+        ? (language === 'en' ? roomMeta.descriptionEn : roomMeta.descriptionIt)
+        : ''
+
     return (
         <div className="room-page">
+            {roomMeta && (
+                <Seo
+                    title={seoTitle}
+                    description={seoDescription}
+                    path={`/stanza/${roomMeta.slug}`}
+                    image={roomMeta.image}
+                    jsonLd={roomJsonLd(roomMeta.slug, language)}
+                    extraJsonLd={[
+                        breadcrumbJsonLd([
+                            { name: 'Home', path: '/' },
+                            { name: language === 'en' ? 'Rooms' : 'Le Stanze', path: '/#rooms' },
+                            { name: language === 'en' ? roomMeta.nameEn : roomMeta.nameIt, path: `/stanza/${roomMeta.slug}` }
+                        ])
+                    ]}
+                />
+            )}
             <Navbar />
 
             {/* Image Gallery */}

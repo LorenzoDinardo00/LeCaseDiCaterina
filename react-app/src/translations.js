@@ -144,7 +144,7 @@ export const translations = {
       sections: [
         {
           title: '1. Titolare del Trattamento',
-          body: 'Titolare del trattamento è Giacomo Marretti, con sede in Via dello Studio 12, 50122 Firenze (FI), Italia — email: giacomomarretti1997@gmail.com, telefono: +39 333 199 2394. Il Titolare può essere contattato per qualsiasi richiesta relativa al trattamento dei dati personali e all’esercizio dei diritti dell’interessato.'
+          body: 'Titolare del trattamento è la Ditta Individuale Marretti Giacomo — P.IVA 07282350482, Codice CIN IT048017B4UPQMRN5Z — sede legale: Località Casaglia 3B, 50032 Borgo San Lorenzo (FI), Italia. Sede operativa / struttura ricettiva: Via dello Studio 12, 50122 Firenze (FI), Italia. Email: giacomomarretti1997@gmail.com — Telefono / WhatsApp: +39 333 199 2394. Il Titolare può essere contattato per qualsiasi richiesta relativa al trattamento dei dati personali e all’esercizio dei diritti dell’interessato.'
         },
         {
           title: '2. Tipologie di dati raccolti',
@@ -425,7 +425,7 @@ export const translations = {
       sections: [
         {
           title: '1. Data Controller',
-          body: 'The Data Controller is Giacomo Marretti, with registered address at Via dello Studio 12, 50122 Florence (FI), Italy — email: giacomomarretti1997@gmail.com, phone: +39 333 199 2394. The Controller may be contacted regarding any request related to the processing of personal data and the exercise of data subjects’ rights.'
+          body: 'The Data Controller is Ditta Individuale Marretti Giacomo (sole proprietorship) — VAT no. 07282350482, Italian CIN code IT048017B4UPQMRN5Z — registered office: Località Casaglia 3B, 50032 Borgo San Lorenzo (FI), Italy. Operating address / accommodation: Via dello Studio 12, 50122 Florence (FI), Italy. Email: giacomomarretti1997@gmail.com — Phone / WhatsApp: +39 333 199 2394. The Controller may be contacted regarding any request related to the processing of personal data and the exercise of data subjects’ rights.'
         },
         {
           title: '2. Categories of data collected',

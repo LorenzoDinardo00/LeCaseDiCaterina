@@ -3,6 +3,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useLanguage } from './LanguageContext'
 import { useCookieConsent } from './ConsentManager'
 import { translations } from './translations'
+import Seo from './Seo'
+import { defaultSiteJsonLd, breadcrumbJsonLd, faqJsonLd, FAQ_DATA, PRERENDER_ROUTES } from './siteMetadata'
+import ConsentBanner from './ConsentBanner'
 import './styles.css'
 
 // Navbar Component
@@ -640,6 +643,7 @@ function Footer() {
               <li><a href="#about">{translations[language].nav.about}</a></li>
               <li><a href="#rooms">{translations[language].nav.rooms}</a></li>
               <li><a href="#contact">{translations[language].nav.contact}</a></li>
+              <li><Link to="/faq">{language === 'en' ? 'FAQ' : 'FAQ'}</Link></li>
               <li><a href="#" onClick={openPreferences}>{t.preferences}</a></li>
               <li><Link to="/privacy-policy">{t.privacy}</Link></li>
               <li><Link to="/cookie-policy">{t.cookie}</Link></li>
@@ -659,8 +663,6 @@ function Footer() {
     </footer>
   )
 }
-
-import ConsentBanner from './ConsentBanner'
 
 // Main App Component
 function App() {
@@ -720,8 +722,23 @@ function App() {
     }
   }, [])
 
+  const { language } = useLanguage()
+  const homeRoute = PRERENDER_ROUTES.find(r => r.path === '/')
+  const title = language === 'en' ? homeRoute.titleEn : homeRoute.titleIt
+  const description = language === 'en' ? homeRoute.descriptionEn : homeRoute.descriptionIt
+
   return (
     <>
+      <Seo
+        title={title}
+        description={description}
+        path="/"
+        jsonLd={defaultSiteJsonLd()}
+        extraJsonLd={[
+          breadcrumbJsonLd([{ name: 'Home', path: '/' }]),
+          faqJsonLd(language || 'it')
+        ]}
+      />
       <Navbar />
       <HeroSection />
       <AboutSection />

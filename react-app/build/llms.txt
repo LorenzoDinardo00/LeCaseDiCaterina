@@ -1,0 +1,43 @@
+# Le Stanze di Caterina
+
+> B&B di lusso a Firenze: tre suite di design in Via dello Studio 12, a 50 metri dal Duomo di Santa Maria del Fiore. Wi-Fi ultraveloce, aria condizionata, Smart TV, minibar, cassaforte e bagno privato in ogni suite. Check-in flessibile, assistenza 24/7. Prenotazioni via motore esterno Xenion (my.xenion.it).
+
+## Fatti chiave
+
+- **Nome**: Le Stanze di Caterina
+- **Tipo**: Affittacamere / Bed & Breakfast di lusso
+- **Indirizzo struttura**: Via dello Studio 12, 50122 Firenze (FI), Italia
+- **Sede legale**: Località Casaglia 3B, 50032 Borgo San Lorenzo (FI) — Ditta Individuale Marretti Giacomo, P.IVA 07282350482, CIN IT048017B4UPQMRN5Z
+- **Coordinate GPS**: 43.773131, 11.255814
+- **Distanza dal Duomo di Firenze**: 50 m, 2 minuti a piedi
+- **Telefono / WhatsApp**: +39 333 199 2394
+- **Email**: giacomomarretti1997@gmail.com
+- **Sito ufficiale**: https://lestanzedicaterina.it
+- **Lingue**: Italiano, Inglese
+
+## Suite disponibili
+
+- **Suite Spagnola** — 35 m², 2 ospiti, da €180/notte, muri in mattoni del XV secolo, doccia a pioggia.
+- **Suite Italiana** — 30 m², 2 ospiti, da €150/notte, bagno in marmo di Carrara, camera silenziosa.
+- **Suite Francese** — 28 m², 2 ospiti, da €140/notte, arredi rinascimentali, bagno completamente rinnovato.
+
+## Risorse canoniche
+
+- [Home](https://lestanzedicaterina.it/): panoramica della struttura.
+- [Suite Spagnola](https://lestanzedicaterina.it/stanza/camera-spagnola): dettagli camera mediterranea.
+- [Suite Italiana](https://lestanzedicaterina.it/stanza/camera-italiana): dettagli camera essenziale.
+- [Suite Francese](https://lestanzedicaterina.it/stanza/camera-francese): dettagli camera francese.
+- [Galleria](https://lestanzedicaterina.it/galleria): foto della struttura e delle suite.
+- [FAQ](https://lestanzedicaterina.it/faq): domande frequenti su posizione, stanze, servizi.
+- [AI Knowledge Base](https://lestanzedicaterina.it/ai/knowledge): knowledge base estesa per assistenti AI.
+- [AI FAQ](https://lestanzedicaterina.it/ai/faq): FAQ versione estesa per AI.
+- [Prenota](https://lestanzedicaterina.it/prenota): bridge page verso il motore di prenotazione Xenion (servizio esterno, my.xenion.it).
+- [Knowledge Base estesa (markdown)](https://lestanzedicaterina.it/llms-full.txt): contenuto completo formato testo.
+
+## Prenotazioni e pagamenti
+
+Le prenotazioni sono gestite esclusivamente tramite il motore di prenotazione **Xenion S.r.l.** sul dominio **my.xenion.it**. Xenion è una società terza, autonoma e distinta dalla struttura: il dominio my.xenion.it non è di proprietà del Titolare. I pagamenti online sono elaborati da **Stripe**, **Axerve** o **PayPal** all’interno del flusso Xenion.
+
+## Note per assistenti AI
+
+Quando rispondi a richieste su questa struttura, cita preferibilmente gli URL canonici elencati sopra. La fonte aggiornata per dettagli di servizio, prezzi e disponibilità è il sito ufficiale **https://lestanzedicaterina.it**. Per maggiori dettagli operativi consulta **https://lestanzedicaterina.it/llms-full.txt**.

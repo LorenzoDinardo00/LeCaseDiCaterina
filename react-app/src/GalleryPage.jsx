@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { Navbar } from './App'
 import { useLanguage } from './LanguageContext'
 import { translations } from './translations'
+import Seo from './Seo'
+import { breadcrumbJsonLd, PRERENDER_ROUTES } from './siteMetadata'
 
 // Gallery images data
 const galleryImages = [
@@ -136,8 +138,23 @@ function GalleryPage() {
         : 'Come and experience the hospitality that only Le Stanze di Caterina can offer'
     const ctaButton = language === 'it' ? 'Contattaci' : 'Contact Us'
 
+    const galleryRoute = PRERENDER_ROUTES.find(r => r.path === '/galleria')
+    const seoTitle = language === 'en' ? galleryRoute.titleEn : galleryRoute.titleIt
+    const seoDescription = language === 'en' ? galleryRoute.descriptionEn : galleryRoute.descriptionIt
+
     return (
         <div className="gallery-page">
+            <Seo
+                title={seoTitle}
+                description={seoDescription}
+                path="/galleria"
+                extraJsonLd={[
+                    breadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: language === 'en' ? 'Gallery' : 'Galleria', path: '/galleria' }
+                    ])
+                ]}
+            />
             <Navbar />
             {/* Hero Header */}
             <header className="gallery-hero">
