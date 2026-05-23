@@ -282,7 +282,7 @@ function AboutSection() {
             </div>
           </div>
           <div className="about-image">
-            <img src="/img/IMG_0714.JPG" alt="Interno Le Stanze di Caterina" loading="lazy" />
+            <img src="/img/IMG_0714.JPG" alt="Interno del B&B Le Stanze di Caterina in Via dello Studio, Firenze centro storico a 50 metri dal Duomo" loading="lazy" />
             <div className="image-frame"></div>
           </div>
         </div>
