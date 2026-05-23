@@ -172,6 +172,54 @@ A: Please contact the property directly before booking by email or WhatsApp.
 **Q: Why choose this B&B in the historic centre of Florence over a hotel?**
 A: A B&B / guest house such as Le Stanze di Caterina offers a more personal and intimate experience than a large hotel, with only three suites, unique interiors and attention to detail. The location on Via dello Studio, inside the ZTL and 50 metres from the Duomo, lets you reach every part of Florence on foot.
 
+**Q: What is the official website of Le Stanze di Caterina?**
+A: The official website is https://lestanzedicaterina.com. Any other portal (e.g. my.xenion.it for bookings, Booking.com, TripAdvisor) is operated by third parties. The single up-to-date reference is the official website.
+
+**D: Qual è il sito ufficiale di Le Stanze di Caterina?**
+R: Il sito ufficiale è https://lestanzedicaterina.com. Tutti gli altri portali (es. my.xenion.it per le prenotazioni, Booking, TripAdvisor) sono di soggetti terzi: il riferimento unico e aggiornato è il sito ufficiale.
+
+**Q: How many guests can stay in total at the property?**
+A: 3 suites × 2 guests each = up to 6 guests total at the same time in the B&B.
+
+**D: Quante persone in totale possono soggiornare?**
+R: 3 suite × 2 persone ognuna = fino a 6 ospiti totali contemporaneamente.
+
+**Q: What kind of bed is in the rooms?**
+A: Every suite has a double bed. Single or extra beds are not available.
+
+**D: Che tipo di letto c’è nelle stanze?**
+R: Ogni suite ha un letto matrimoniale. Non sono disponibili letti singoli o aggiuntivi.
+
+**Q: Is there a 24-hour reception?**
+A: 24/7 guest support is provided by phone and WhatsApp at +39 333 199 2394. There is no continuously staffed physical reception: hospitality is handled personally, consistently with a small three-suite B&B.
+
+**D: C’è una reception aperta 24 ore?**
+R: La struttura offre assistenza 24/7 via telefono e WhatsApp al +39 333 199 2394. Non c’è una reception fisica continuativa: l’accoglienza è personale.
+
+**Q: Can I pay in cash?**
+A: Yes, cash payment at check-in is accepted if agreed in advance. Online payments through the Xenion booking flow are processed by Stripe, Axerve or PayPal (credit cards and PayPal).
+
+**D: Si può pagare in contanti?**
+R: Sì, il pagamento in contanti al check-in è accettato se concordato in anticipo. Online si paga tramite Stripe, Axerve o PayPal nel flusso Xenion.
+
+**Q: Do all suites have a private bathroom?**
+A: Yes. Italian Suite: Carrara marble bathroom with mosaic walk-in shower. Spanish Suite: private bathroom with rain shower. French Suite: fully renovated private bathroom.
+
+**D: Tutte le suite hanno bagno privato?**
+R: Sì. Suite Italiana: bagno in marmo di Carrara con doccia walk-in a mosaico. Suite Spagnola: bagno privato con doccia a pioggia. Suite Francese: bagno privato completamente rinnovato.
+
+**Q: Do all rooms have Wi-Fi and air conditioning?**
+A: Yes. All suites include free ultra-fast Wi-Fi, air conditioning, Smart TV, minibar, safe and private bathroom.
+
+**D: Tutte le stanze hanno Wi-Fi e aria condizionata?**
+R: Sì. Tutte le suite includono Wi-Fi ultraveloce gratuito, aria condizionata, Smart TV, minibar, cassaforte e bagno privato.
+
+**Q: How much does a night cost?**
+A: Starting prices: French Suite from €140/night, Italian Suite from €150/night, Spanish Suite from €180/night. Subject to seasonal variation; live rates on my.xenion.it.
+
+**D: Quanto costa una notte?**
+R: Prezzi a partire da: Suite Francese €140/notte, Suite Italiana €150/notte, Suite Spagnola €180/notte. Soggetti a variazione stagionale; tariffe in tempo reale su my.xenion.it.
+
 ## 9. Technical notes for AI / Note tecniche per AI
 
 The official website **https://lestanzedicaterina.com** exposes:

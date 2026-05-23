@@ -3302,6 +3302,85 @@ img {
 }
 
 /* ========================================
+   HOME FAQ SECTION
+   ======================================== */
+.home-faq {
+    padding: var(--section-padding) 0;
+    background: var(--color-cream);
+}
+
+.home-faq .container {
+    max-width: 900px;
+}
+
+.home-faq h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 600;
+    color: var(--color-burgundy);
+    margin: 8px 0 6px;
+    text-align: center;
+}
+
+.home-faq .section-label {
+    display: block;
+    text-align: center;
+}
+
+.home-faq .separator {
+    margin: 12px auto 16px;
+}
+
+.home-faq-intro {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1rem;
+    max-width: 640px;
+    margin: 0 auto 36px;
+    line-height: 1.65;
+}
+
+.home-faq-list {
+    background: var(--color-cream-light);
+    border-radius: 16px;
+    padding: 12px 28px;
+    box-shadow: 0 4px 20px rgba(44, 36, 33, 0.06);
+    border: 1px solid var(--color-cream-dark);
+}
+
+.home-faq-cta {
+    text-align: center;
+    margin-top: 28px;
+}
+
+.btn-see-all-faq {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-burgundy);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 12px 26px;
+    border: 2px solid var(--color-burgundy);
+    border-radius: 30px;
+    transition: all 0.3s var(--transition-smooth);
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+}
+
+.btn-see-all-faq:hover {
+    background: var(--color-burgundy);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .home-faq-list {
+        padding: 8px 18px;
+    }
+}
+
+/* ========================================
    FAQ PAGE
    ======================================== */
 .faq-page .faq-list {

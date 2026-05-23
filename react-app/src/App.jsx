@@ -4,7 +4,7 @@ import { useLanguage } from './LanguageContext'
 import { useCookieConsent } from './ConsentManager'
 import { translations } from './translations'
 import Seo from './Seo'
-import { defaultSiteJsonLd, breadcrumbJsonLd, faqJsonLd, FAQ_DATA, PRERENDER_ROUTES } from './siteMetadata'
+import { defaultSiteJsonLd, breadcrumbJsonLd, faqJsonLd, FAQ_DATA, PRERENDER_ROUTES, SITE } from './siteMetadata'
 import ConsentBanner from './ConsentBanner'
 import './styles.css'
 
@@ -538,6 +538,57 @@ function LocationSection() {
   )
 }
 
+// FAQ Section in home (essential questions, fa indicizzare keyword e dà materiale alle AI)
+function HomeFaqSection() {
+  const { language } = useLanguage()
+  const lang = language || 'it'
+  const items = (FAQ_DATA[lang] || FAQ_DATA.it).slice(0, 8)
+  const [openIndex, setOpenIndex] = useState(0)
+
+  const heading = lang === 'en' ? 'Frequently Asked Questions' : 'Domande Frequenti'
+  const subheading = lang === 'en'
+    ? 'Short answers to the most common questions about the Le Stanze di Caterina B&B in Florence, near the Duomo.'
+    : 'Risposte brevi alle domande più comuni sul B&B Le Stanze di Caterina a Firenze, vicino al Duomo.'
+  const seeAll = lang === 'en' ? 'See all questions' : 'Vedi tutte le domande'
+
+  return (
+    <section id="faq" className="home-faq">
+      <div className="container">
+        <span className="section-label">FAQ</span>
+        <h2>{heading}</h2>
+        <div className="separator"></div>
+        <p className="home-faq-intro">{subheading}</p>
+
+        <div className="home-faq-list">
+          {items.map((item, idx) => {
+            const open = openIndex === idx
+            return (
+              <div key={idx} className={`faq-item ${open ? 'open' : ''}`}>
+                <button
+                  type="button"
+                  className="faq-question"
+                  aria-expanded={open}
+                  onClick={() => setOpenIndex(open ? -1 : idx)}
+                >
+                  <span>{item.q}</span>
+                  <span className="faq-toggle" aria-hidden="true">{open ? '−' : '+'}</span>
+                </button>
+                <div className="faq-answer" role="region">
+                  <p>{item.a}</p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        <div className="home-faq-cta">
+          <Link to="/faq" className="btn-see-all-faq">{seeAll}</Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // Contact Section Component
 function ContactSection() {
   const { language } = useLanguage()
@@ -747,6 +798,7 @@ function App() {
       <GallerySection />
       <LocationSection />
       <ContactSection />
+      <HomeFaqSection />
       <Footer />
       <ConsentBanner />
     </>
