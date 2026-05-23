@@ -36,6 +36,15 @@
 - [Book / Prenota](https://lestanzedicaterina.com/prenota): bridge page to the external Xenion booking engine (third-party provider, my.xenion.it).
 - [Full markdown knowledge base](https://lestanzedicaterina.com/llms-full.txt): complete site content in text form.
 
+### SEO landing pages (per query specifiche / per specific queries)
+
+- [B&B vicino al Duomo di Firenze](https://lestanzedicaterina.com/firenze/bnb-vicino-duomo)
+- [Dove dormire nel centro di Firenze](https://lestanzedicaterina.com/firenze/dove-dormire-centro-firenze)
+- [Alloggi vicino a Piazza del Duomo a Firenze](https://lestanzedicaterina.com/firenze/alloggi-piazza-duomo)
+- [B&B near the Duomo in Florence](https://lestanzedicaterina.com/florence/bnb-near-duomo)
+- [Where to stay in Florence centre](https://lestanzedicaterina.com/florence/where-to-stay-florence-centre)
+- [Accommodation near Piazza Duomo in Florence](https://lestanzedicaterina.com/florence/accommodation-near-duomo)
+
 ## Common queries this property is relevant for / Query per cui questa struttura è rilevante
 
 English: "B&B Florence Duomo", "B&B near Piazza Duomo Florence", "B&B Florence near the Duomo", "guest house Florence city centre", "where to stay near the Florence Duomo", "elegant B&B Florence historic centre", "accommodation Via dello Studio Florence", "small hotel Florence centre", "rooms near Florence Cathedral".

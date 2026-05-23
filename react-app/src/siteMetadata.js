@@ -352,3 +352,92 @@ export const PRERENDER_ROUTES = [
         priority: '0.1'
     }
 ]
+
+// Landing page SEO mirate a query specifiche (IT su /firenze/*, EN su /florence/*).
+// Pagine indicizzabili con contenuto unico + CTA verso la home (no doorway / no auto-redirect).
+export const LANDING_ROUTES = [
+    {
+        path: '/firenze/bnb-vicino-duomo',
+        slug: 'bnb-vicino-duomo',
+        lang: 'it',
+        title: 'B&B vicino al Duomo di Firenze — Le Stanze di Caterina, Via dello Studio 12',
+        description: 'Cerchi un B&B vicino al Duomo di Firenze? Le Stanze di Caterina si trovano in Via dello Studio 12, a 50 metri da Piazza del Duomo. Tre suite eleganti nel centro storico.',
+        h1: 'B&B vicino al Duomo di Firenze',
+        intro: [
+            'Trovare un B&B davvero vicino al Duomo di Firenze non è scontato: molte strutture in città dichiarano genericamente "vicino al Duomo" ma sono in realtà a 15–20 minuti a piedi. Le Stanze di Caterina si trovano in Via dello Studio 12, una traversa storica del centro di Firenze, a soli 50 metri (circa 2 minuti a piedi) dal Duomo di Santa Maria del Fiore e dal Battistero di San Giovanni.',
+            'L’alloggio è all’interno della Zona a Traffico Limitato (ZTL) del centro storico, in una via prevalentemente pedonale che collega Piazza del Duomo a Piazza Santa Croce passando per via dell’Oriuolo. Da qui si raggiungono a piedi tutti i principali monumenti: Battistero (3 min), Piazza della Signoria (5 min), Galleria degli Uffizi (5 min), Ponte Vecchio (8 min), Galleria dell’Accademia con il David di Michelangelo (8 min).',
+            'Le Stanze di Caterina è un piccolo B&B / affittacamere elegante composto da tre suite a tema — Spagnola, Italiana, Francese — pensato per coppie e viaggiatori esigenti che cercano un’esperienza più intima rispetto a un grande hotel, senza rinunciare a una posizione centralissima.'
+        ],
+        bottomQuestion: 'Vuoi vedere le suite e prenotare direttamente?'
+    },
+    {
+        path: '/firenze/dove-dormire-centro-firenze',
+        slug: 'dove-dormire-centro-firenze',
+        lang: 'it',
+        title: 'Dove dormire nel centro di Firenze — B&B Le Stanze di Caterina',
+        description: 'Dove dormire nel centro storico di Firenze? Le Stanze di Caterina è un B&B elegante in Via dello Studio 12, a 50 metri dal Duomo. Tre suite di design.',
+        h1: 'Dove dormire nel centro storico di Firenze',
+        intro: [
+            'Scegliere dove dormire nel centro di Firenze cambia radicalmente l’esperienza del soggiorno. Alloggiare nel centro storico significa svegliarsi a due passi dal Duomo, raggiungere i musei e i ristoranti senza prendere autobus o taxi, e godersi Firenze nelle ore più tranquille — la mattina presto e dopo il tramonto, quando i turisti in giornata sono tornati ai loro alberghi in periferia.',
+            'Le Stanze di Caterina è uno dei B&B più centrali di Firenze: si trova in Via dello Studio 12, una traversa storica all’interno della ZTL, a 50 metri dal Duomo di Santa Maria del Fiore. La struttura conta tre suite a tema (Spagnola, Italiana, Francese), ognuna con bagno privato, Wi-Fi ultraveloce, aria condizionata, Smart TV, minibar e cassaforte. La gestione personale di una guest house elegante con sole tre stanze garantisce un’accoglienza curata e flessibile, lontana dall’anonimato delle grandi catene alberghiere.',
+            'La scelta del centro di Firenze ha una logica precisa: la ZTL implica niente parcheggio privato e nessun accesso libero in auto. Per ovviare a questo abbiamo predisposto indicazioni precise sui parcheggi pubblici nelle vicinanze e sul possibile accesso temporaneo alla ZTL.'
+        ],
+        bottomQuestion: 'Pronto a scoprire le tre suite?'
+    },
+    {
+        path: '/firenze/alloggi-piazza-duomo',
+        slug: 'alloggi-piazza-duomo',
+        lang: 'it',
+        title: 'Alloggi vicino a Piazza del Duomo a Firenze — Le Stanze di Caterina',
+        description: 'Cerchi un alloggio vicino a Piazza del Duomo a Firenze? Le Stanze di Caterina è un B&B in Via dello Studio 12, a 50 m da Piazza Duomo. Tre suite eleganti.',
+        h1: 'Alloggi vicino a Piazza del Duomo a Firenze',
+        intro: [
+            'La zona attorno a Piazza del Duomo è il cuore turistico e storico di Firenze: qui si concentrano la Cattedrale di Santa Maria del Fiore con la celebre cupola del Brunelleschi, il Battistero di San Giovanni, il Campanile di Giotto e il Museo dell’Opera del Duomo. Trovare un alloggio davvero in questa zona significa potersi spostare a piedi praticamente ovunque nel centro storico, senza bisogno di mezzi pubblici.',
+            'Le Stanze di Caterina è un B&B / affittacamere elegante a 50 metri da Piazza del Duomo, in Via dello Studio 12. Si tratta di un palazzo storico del centro di Firenze, con tre suite a tema curate nei minimi dettagli. Ogni suite ospita fino a due persone, con bagno privato, Wi-Fi gratuito, aria condizionata, Smart TV, minibar e cassaforte. Il check-in è flessibile su accordo e l’assistenza è garantita 24/7 via telefono o WhatsApp al +39 333 199 2394.',
+            'A differenza degli hotel più grandi situati nelle vicinanze, Le Stanze di Caterina offre un soggiorno più personale e intimo, ideale per coppie e per chi cerca un’esperienza autentica nel centro storico fiorentino.'
+        ],
+        bottomQuestion: 'Vuoi consultare disponibilità e prenotare?'
+    },
+    {
+        path: '/florence/bnb-near-duomo',
+        slug: 'bnb-near-duomo',
+        lang: 'en',
+        title: 'B&B near the Duomo in Florence — Le Stanze di Caterina, Via dello Studio',
+        description: 'Looking for a B&B near the Duomo in Florence? Le Stanze di Caterina is at Via dello Studio 12, 50 metres from Piazza del Duomo. Three elegant suites.',
+        h1: 'B&B near the Duomo in Florence',
+        intro: [
+            'Finding a B&B that is truly near the Duomo in Florence is not a given: many properties advertise themselves as "near the Duomo" but are actually a 15–20 minute walk away. Le Stanze di Caterina is at Via dello Studio 12, a historic inner street of Florence, just 50 metres (about a 2-minute walk) from the Duomo di Santa Maria del Fiore and from the Baptistery of San Giovanni.',
+            'The property sits fully inside the Limited Traffic Zone (ZTL) of the historic centre, on a largely pedestrian street that links Piazza del Duomo to Piazza Santa Croce via dell’Oriuolo. From here every main monument is reachable on foot: Baptistery (3 min), Piazza della Signoria (5 min), Uffizi Gallery (5 min), Ponte Vecchio (8 min), Accademia Gallery with Michelangelo’s David (8 min).',
+            'Le Stanze di Caterina is a small B&B / elegant guest house with three themed suites — Spanish, Italian, French — designed for couples and demanding travellers looking for a more intimate experience than a large hotel, without giving up a truly central location.'
+        ],
+        bottomQuestion: 'Want to see the suites and book directly?'
+    },
+    {
+        path: '/florence/where-to-stay-florence-centre',
+        slug: 'where-to-stay-florence-centre',
+        lang: 'en',
+        title: 'Where to stay in Florence centre — B&B Le Stanze di Caterina',
+        description: 'Where to stay in the Florence historic centre? Le Stanze di Caterina is an elegant B&B at Via dello Studio 12, 50 metres from the Duomo. Three design suites.',
+        h1: 'Where to stay in the historic centre of Florence',
+        intro: [
+            'Choosing where to stay in the centre of Florence radically changes how you experience the city. Staying inside the historic centre means waking up steps away from the Duomo, reaching museums and restaurants on foot, and enjoying Florence at its quietest — early in the morning and after sunset, when day-trippers have left for their hotels outside the city.',
+            'Le Stanze di Caterina is one of the most central B&Bs in Florence: it sits at Via dello Studio 12, a historic inner street inside the ZTL, just 50 metres from the Duomo di Santa Maria del Fiore. The property has three themed suites (Spanish, Italian, French), each with a private bathroom, ultra-fast free Wi-Fi, air conditioning, Smart TV, minibar and safe. The personal management of an elegant guest house with only three rooms ensures a curated and flexible welcome, far from the anonymity of large hotel chains.',
+            'A central Florence stay does have a specific catch: the ZTL means no private parking and no free car access. For this reason we provide detailed guidance on nearby public car parks and on the possible temporary ZTL access permits.'
+        ],
+        bottomQuestion: 'Ready to discover the three suites?'
+    },
+    {
+        path: '/florence/accommodation-near-duomo',
+        slug: 'accommodation-near-duomo',
+        lang: 'en',
+        title: 'Accommodation near Piazza Duomo in Florence — Le Stanze di Caterina',
+        description: 'Looking for accommodation near Piazza Duomo in Florence? Le Stanze di Caterina is a B&B at Via dello Studio 12, 50 metres from Piazza Duomo. Three elegant suites.',
+        h1: 'Accommodation near Piazza del Duomo in Florence',
+        intro: [
+            'The area around Piazza del Duomo is the historic and touristic heart of Florence: here you find the Cattedrale di Santa Maria del Fiore with Brunelleschi’s famous dome, the Baptistery of San Giovanni, Giotto’s bell tower and the Museo dell’Opera del Duomo. Finding accommodation truly in this area means being able to walk everywhere in the historic centre, without needing public transport.',
+            'Le Stanze di Caterina is an elegant B&B / Italian "affittacamere" 50 metres from Piazza del Duomo, at Via dello Studio 12. It occupies a historic palazzo in the centre of Florence, with three carefully curated themed suites. Each suite accommodates up to two guests, with private bathroom, free Wi-Fi, air conditioning, Smart TV, minibar and safe. Check-in is flexible upon agreement and 24/7 support is provided by phone or WhatsApp at +39 333 199 2394.',
+            'Unlike the larger hotels in the nearby area, Le Stanze di Caterina offers a more personal and intimate stay, ideal for couples and for those seeking an authentic experience in Florence’s historic centre.'
+        ],
+        bottomQuestion: 'Want to check availability and book?'
+    }
+]

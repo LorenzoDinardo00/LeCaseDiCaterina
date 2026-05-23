@@ -12,6 +12,7 @@ import {
     ATTRACTIONS,
     FAQ_DATA,
     PRERENDER_ROUTES,
+    LANDING_ROUTES,
     defaultSiteJsonLd,
     roomJsonLd,
     breadcrumbJsonLd,
@@ -295,6 +296,66 @@ async function generateRoute(route, baseHtml) {
     return outPath
 }
 
+function noscriptLandingBlock(route) {
+    const lang = route.lang
+    const visitLabel = lang === 'en' ? 'Visit the official website' : 'Vai al sito ufficiale'
+    const paragraphs = route.intro.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n')
+    const rooms = Object.values(ROOMS).map((r) => {
+        const name = lang === 'en' ? r.nameEn : r.nameIt
+        const desc = lang === 'en' ? r.descriptionEn : r.descriptionIt
+        return `<h3>${escapeHtml(name)}</h3><p>${escapeHtml(desc)}</p><p><a href="${SITE.baseUrl}/stanza/${r.slug}">${SITE.baseUrl}/stanza/${r.slug}</a></p>`
+    }).join('\n')
+    return `<h1>${escapeHtml(route.h1)}</h1>
+${paragraphs}
+<h2>${lang === 'en' ? 'The three suites' : 'Le tre suite'}</h2>
+${rooms}
+<h2>${lang === 'en' ? 'Contact' : 'Contatti'}</h2>
+<p>${escapeHtml(SITE.email)} · ${escapeHtml(SITE.phone)} · ${escapeHtml(SITE.address.streetAddress)}, ${escapeHtml(SITE.address.postalCode)} ${escapeHtml(SITE.address.addressLocality)}</p>
+<p><a href="${SITE.baseUrl}/">${visitLabel}: ${SITE.baseUrl}/</a></p>`
+}
+
+async function generateLanding(route, baseHtml) {
+    const head = metaTags({
+        title: route.title,
+        description: route.description,
+        canonical: absUrl(route.path),
+        image: SITE.defaultImageAbsolute,
+        noindex: false,
+        language: route.lang
+    })
+    const jsonLdBlocks = [
+        defaultSiteJsonLd(),
+        breadcrumbJsonLd([
+            { name: 'Home', path: '/' },
+            { name: route.h1, path: route.path }
+        ]),
+        faqJsonLd(route.lang)
+    ]
+    const jsonLd = jsonLdScripts(jsonLdBlocks)
+    const block = noscriptLandingBlock(route)
+    const ssrFallback = `<div id="ssr-fallback" aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+<section lang="${route.lang}">${block}</section>
+</div>`
+    const noscript = `<noscript>${block}</noscript>`
+
+    let html = baseHtml
+        .replace(/<title>[^<]*<\/title>/g, '')
+        .replace(/<meta\s+name="description"[^>]*>/g, '')
+        .replace(/<meta\s+name="robots"[^>]*>/g, '')
+        .replace(/<link\s+rel="canonical"[^>]*>/g, '')
+        .replace(/<link\s+rel="alternate"\s+hreflang[^>]*>/g, '')
+        .replace(/<meta\s+property="og:[^"]+"[^>]*>/g, '')
+        .replace(/<meta\s+name="twitter:[^"]+"[^>]*>/g, '')
+        .replace(/<\/head>/, `${head}\n    ${jsonLd}\n</head>`)
+        .replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root"></div>\n${ssrFallback}\n${noscript}`)
+
+    const outDir = path.join(BUILD_DIR, ...route.path.split('/').filter(Boolean))
+    await ensureDir(outDir)
+    const outPath = path.join(outDir, 'index.html')
+    await writeFile(outPath, html, 'utf8')
+    return outPath
+}
+
 async function main() {
     const indexPath = path.join(BUILD_DIR, 'index.html')
     if (!(await pathExists(indexPath))) {
@@ -306,6 +367,10 @@ async function main() {
     const generated = []
     for (const route of PRERENDER_ROUTES) {
         const out = await generateRoute(route, baseHtml)
+        generated.push(out)
+    }
+    for (const route of LANDING_ROUTES) {
+        const out = await generateLanding(route, baseHtml)
         generated.push(out)
     }
 

@@ -34,7 +34,7 @@ export function LanguageProvider({ children }) {
   }
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   )
@@ -43,8 +43,7 @@ export function LanguageProvider({ children }) {
 export function useLanguage() {
   const context = useContext(LanguageContext)
   if (!context) {
-    // Return default values instead of throwing to prevent app crash
-    return { language: 'it', toggleLanguage: () => {} }
+    return { language: 'it', toggleLanguage: () => {}, setLanguage: () => {} }
   }
   return context
 }

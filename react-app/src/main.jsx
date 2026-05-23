@@ -13,6 +13,7 @@ import PrivacyPolicy from './LegalPrivacy.jsx'
 import CookiePolicy from './LegalCookies.jsx'
 import FaqPage from './FaqPage.jsx'
 import AIKnowledgePage from './AIKnowledgePage.jsx'
+import LandingPage from './LandingPage.jsx'
 import './gallery.css'
 import './room.css'
 
@@ -54,6 +55,8 @@ try {
                   <Route path="/faq" element={<FaqPage />} />
                   <Route path="/ai/knowledge" element={<AIKnowledgePage />} />
                   <Route path="/ai/faq" element={<FaqPage isAiVariant />} />
+                  <Route path="/firenze/:slug" element={<LandingPage />} />
+                  <Route path="/florence/:slug" element={<LandingPage />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   <Route path="/cookie-policy" element={<CookiePolicy />} />
                 </Routes>
