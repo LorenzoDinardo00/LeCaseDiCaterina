@@ -73,9 +73,9 @@ function noscriptHomeBlock(lang = 'it') {
 <p>Le Stanze di Caterina is a luxury property in the historic centre of Florence, at Via dello Studio 12, just 50 metres from the Duomo di Santa Maria del Fiore. Three themed suites — Spanish, Italian, French — combine Renaissance elegance with contemporary comfort.</p>
 <h2>Our suites</h2>
 <ul>
-<li><strong>Spanish Suite</strong> (35 m², from €180/night) — 15th-century brick walls, handcrafted golden headboard, rain shower.</li>
-<li><strong>Italian Suite</strong> (30 m², from €150/night) — Carrara marble bathroom, designer furniture, quiet courtyard room.</li>
-<li><strong>French Suite</strong> (28 m², from €140/night) — Renaissance-inspired interiors, fully renovated private bathroom.</li>
+<li><strong>Spanish Suite</strong> (35 m²) — 15th-century brick walls, handcrafted golden headboard, rain shower.</li>
+<li><strong>Italian Suite</strong> (30 m²) — Carrara marble bathroom, designer furniture, quiet courtyard room.</li>
+<li><strong>French Suite</strong> (28 m²) — Renaissance-inspired interiors, fully renovated private bathroom.</li>
 </ul>
 <h2>Amenities</h2>
 <p>Free ultra-fast Wi-Fi, air conditioning, Smart TV, minibar, safe, private bathroom in every suite. Flexible check-in and 24/7 support.</p>
@@ -86,9 +86,9 @@ function noscriptHomeBlock(lang = 'it') {
 <p>Le Stanze di Caterina è un alloggio di lusso nel centro storico di Firenze, in Via dello Studio 12, a soli 50 metri dal Duomo di Santa Maria del Fiore. Tre suite a tema — Spagnola, Italiana, Francese — uniscono eleganza rinascimentale e comfort contemporaneo.</p>
 <h2>Le nostre suite</h2>
 <ul>
-<li><strong>Suite Spagnola</strong> (35 m², da €180/notte) — muri in mattoni del XV secolo, testata dorata artigianale, doccia a pioggia.</li>
-<li><strong>Suite Italiana</strong> (30 m², da €150/notte) — bagno in marmo di Carrara, design d’autore, camera silenziosa sul cortile interno.</li>
-<li><strong>Suite Francese</strong> (28 m², da €140/notte) — arredi ispirati al Rinascimento, bagno privato completamente rinnovato.</li>
+<li><strong>Suite Spagnola</strong> (35 m²) — muri in mattoni del XV secolo, testata dorata artigianale, doccia a pioggia.</li>
+<li><strong>Suite Italiana</strong> (30 m²) — bagno in marmo di Carrara, design d’autore, camera silenziosa sul cortile interno.</li>
+<li><strong>Suite Francese</strong> (28 m²) — arredi ispirati al Rinascimento, bagno privato completamente rinnovato.</li>
 </ul>
 <h2>Servizi</h2>
 <p>Wi-Fi ultraveloce gratuito, aria condizionata, Smart TV, minibar, cassaforte e bagno privato in ogni suite. Check-in flessibile e assistenza 24/7.</p>
@@ -109,7 +109,6 @@ function noscriptRoomBlock(slug, lang = 'it') {
 <li>Max guests: ${r.guests}</li>
 <li>Beds: ${r.beds} (double)</li>
 <li>Private bathrooms: ${r.bathrooms}</li>
-<li>Price from: €${r.price} per night</li>
 </ul>
 <p>Amenities: ultra-fast Wi-Fi, air conditioning, Smart TV, minibar, safe, private bathroom.</p>
 <p>Location: Via dello Studio 12, 50122 Florence — 50 m from the Florence Duomo (2 min on foot).</p>
@@ -122,7 +121,6 @@ function noscriptRoomBlock(slug, lang = 'it') {
 <li>Ospiti max: ${r.guests}</li>
 <li>Letti: ${r.beds} (matrimoniale)</li>
 <li>Bagni privati: ${r.bathrooms}</li>
-<li>Prezzo a partire da: €${r.price} / notte</li>
 </ul>
 <p>Servizi: Wi-Fi ultraveloce, aria condizionata, Smart TV, minibar, cassaforte, bagno privato.</p>
 <p>Posizione: Via dello Studio 12, 50122 Firenze — a 50 m dal Duomo di Firenze (2 minuti a piedi).</p>
@@ -155,7 +153,7 @@ function noscriptAIKnowledgeBlock(lang = 'it') {
     const rooms = Object.values(ROOMS).map((r) => {
         const name = lang === 'en' ? r.nameEn : r.nameIt
         const desc = lang === 'en' ? r.descriptionEn : r.descriptionIt
-        return `<h3>${escapeHtml(name)}</h3><p>${escapeHtml(desc)}</p><p>${r.size} m² · ${r.guests} ${lang === 'en' ? 'guests' : 'ospiti'} · ${lang === 'en' ? 'from' : 'da'} €${r.price}/${lang === 'en' ? 'night' : 'notte'} · <a href="${SITE.baseUrl}/stanza/${r.slug}">${SITE.baseUrl}/stanza/${r.slug}</a></p>`
+        return `<h3>${escapeHtml(name)}</h3><p>${escapeHtml(desc)}</p><p>${r.size} m² · ${r.guests} ${lang === 'en' ? 'guests' : 'ospiti'} · <a href="${SITE.baseUrl}/stanza/${r.slug}">${SITE.baseUrl}/stanza/${r.slug}</a></p>`
     }).join('\n')
     const attractions = ATTRACTIONS.map((a) => `<li>${escapeHtml(a.name)} — ${a.distanceMinutes} ${lang === 'en' ? 'min' : 'min'}${a.mode ? ' (' + a.mode + ')' : ''}${a.distanceMeters ? ' (~' + a.distanceMeters + ' m)' : ''}</li>`).join('')
     return `<h1>${head}</h1>

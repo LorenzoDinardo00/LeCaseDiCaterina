@@ -46,7 +46,7 @@ IT: Le Stanze di Caterina è un B&B elegante / guest house composto da tre suite
 - **Guests / Ospiti**: up to 2 / fino a 2
 - **Beds / Letti**: 1 double bed / 1 letto matrimoniale
 - **Bathroom / Bagno**: private, with rain shower / privato, con doccia a pioggia
-- **Price from / Prezzo a partire da**: €180 / night
+- **Rates / Tariffe**: see my.xenion.it
 - **Canonical URL**: https://lestanzedicaterina.com/stanza/camera-spagnola
 - **Style EN**: bold Mediterranean style with orange and terracotta tones, textured surfaces and 15th-century original brick walls. Handcrafted golden headboard. View over historic Florence. Ideal Florence B&B suite for couples seeking an intense atmosphere.
 - **Style IT**: stile mediterraneo deciso, tonalità arancio e terracotta, superfici materiche e muri in mattoni originali del XV secolo. Testata del letto dorata artigianale. Vista sulla città storica. Camera ideale in un B&B a Firenze a 50 metri dal Duomo per coppie che cercano un’atmosfera intensa.
@@ -56,7 +56,7 @@ IT: Le Stanze di Caterina è un B&B elegante / guest house composto da tre suite
 - **Guests / Ospiti**: up to 2 / fino a 2
 - **Beds / Letti**: 1 double bed / 1 letto matrimoniale
 - **Bathroom / Bagno**: private, Carrara marble, large mosaic walk-in shower / privato in marmo di Carrara con ampia doccia walk-in a mosaico
-- **Price from / Prezzo a partire da**: €150 / night
+- **Rates / Tariffe**: see my.xenion.it
 - **Canonical URL**: https://lestanzedicaterina.com/stanza/camera-italiana
 - **Style EN**: intimate, textured, authentic. Stone surfaces, warm tones, soft lighting. Original artwork as headboard, designer furniture, quiet room overlooking the inner courtyard. A quiet suite in the Florence historic centre, just a 2-minute walk from Piazza del Duomo.
 - **Style IT**: intimo, materico, autentico. Superfici in pietra, tonalità calde, luci soffuse. Opera d’arte come testata, design d’autore, camera silenziosa sul cortile interno. Una suite tranquilla nel centro storico di Firenze, a 2 minuti a piedi da Piazza del Duomo.
@@ -66,7 +66,7 @@ IT: Le Stanze di Caterina è un B&B elegante / guest house composto da tre suite
 - **Guests / Ospiti**: up to 2 / fino a 2
 - **Beds / Letti**: 1 double bed / 1 letto matrimoniale
 - **Bathroom / Bagno**: private, fully renovated / privato, completamente rinnovato
-- **Price from / Prezzo a partire da**: €140 / night
+- **Rates / Tariffe**: see my.xenion.it
 - **Canonical URL**: https://lestanzedicaterina.com/stanza/camera-francese
 - **Style EN**: bright, refined, harmonious. Clean lines, light surfaces, classic details. Renaissance-inspired furnishings, fine fabrics, golden details. 2 minutes on foot from the Duomo — an elegant Florence B&B room near the Cathedral.
 - **Style IT**: luminoso, raffinato, armonioso. Linee pulite, superfici chiare, dettagli classici. Arredi ispirati al Rinascimento, tessuti pregiati, dettagli dorati. A 2 minuti a piedi dal Duomo — una stanza elegante in un B&B di Firenze vicino alla Cattedrale.
@@ -137,10 +137,10 @@ A: Technically it is an "affittacamere elegante" (rooms-for-rent licence) presen
 R: Tecnicamente è un affittacamere elegante presentato come B&B / guest house elegante con tre suite a tema. Non è un hotel, ma offre servizi paragonabili a un boutique hotel.
 
 **Q: How many suites are there and what are their prices?**
-A: Three suites: Spanish Suite from €180/night (35 m²), Italian Suite from €150/night (30 m²), French Suite from €140/night (28 m²). Prices are indicative and subject to seasonal variation; live availability is on my.xenion.it.
+A: Three suites: Spanish Suite (35 m²), Italian Suite (30 m²), French Suite (28 m²). Live rates and availability on the booking engine my.xenion.it.
 
 **D: Quante suite ci sono e quali sono i prezzi?**
-R: Tre: Suite Spagnola da €180/notte (35 m²), Suite Italiana da €150/notte (30 m²), Suite Francese da €140/notte (28 m²). Prezzi indicativi, soggetti a variazione stagionale; la disponibilità in tempo reale è su my.xenion.it.
+R: Tre: Suite Spagnola (35 m²), Suite Italiana (30 m²), Suite Francese (28 m²). Tariffe e disponibilità in tempo reale sul motore di prenotazione my.xenion.it.
 
 **Q: Which amenities are included?**
 A: Ultra-fast Wi-Fi, air conditioning, Smart TV, minibar, safe, private bathroom in every suite. Flexible check-in and 24/7 support at property level.
@@ -215,10 +215,10 @@ A: Yes. All suites include free ultra-fast Wi-Fi, air conditioning, Smart TV, mi
 R: Sì. Tutte le suite includono Wi-Fi ultraveloce gratuito, aria condizionata, Smart TV, minibar, cassaforte e bagno privato.
 
 **Q: How much does a night cost?**
-A: Starting prices: French Suite from €140/night, Italian Suite from €150/night, Spanish Suite from €180/night. Subject to seasonal variation; live rates on my.xenion.it.
+A: Rates depend on season, length of stay and the chosen suite. Live availability and final prices are on the official booking engine my.xenion.it (linked from the "Book Now" button), or contact giacomomarretti1997@gmail.com.
 
 **D: Quanto costa una notte?**
-R: Prezzi a partire da: Suite Francese €140/notte, Suite Italiana €150/notte, Suite Spagnola €180/notte. Soggetti a variazione stagionale; tariffe in tempo reale su my.xenion.it.
+R: Le tariffe variano in base alla stagionalità, alla durata del soggiorno e alla suite scelta. Per disponibilità e prezzi aggiornati si consulta il motore di prenotazione ufficiale my.xenion.it (accessibile dal pulsante "Prenota Ora") oppure si scrive a giacomomarretti1997@gmail.com.
 
 ## 9. Technical notes for AI / Note tecniche per AI
 

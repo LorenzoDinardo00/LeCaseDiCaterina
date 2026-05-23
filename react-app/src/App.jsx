@@ -538,12 +538,11 @@ function LocationSection() {
   )
 }
 
-// FAQ Section in home (essential questions, fa indicizzare keyword e dà materiale alle AI)
+// FAQ teaser in home: heading + intro + bottone "Vedi tutte le domande" → /faq.
+// La lista completa resta in /faq (linkata anche dal footer e dalla sitemap).
 function HomeFaqSection() {
   const { language } = useLanguage()
   const lang = language || 'it'
-  const items = (FAQ_DATA[lang] || FAQ_DATA.it).slice(0, 8)
-  const [openIndex, setOpenIndex] = useState(0)
 
   const heading = lang === 'en' ? 'Frequently Asked Questions' : 'Domande Frequenti'
   const subheading = lang === 'en'
@@ -558,28 +557,6 @@ function HomeFaqSection() {
         <h2>{heading}</h2>
         <div className="separator"></div>
         <p className="home-faq-intro">{subheading}</p>
-
-        <div className="home-faq-list">
-          {items.map((item, idx) => {
-            const open = openIndex === idx
-            return (
-              <div key={idx} className={`faq-item ${open ? 'open' : ''}`}>
-                <button
-                  type="button"
-                  className="faq-question"
-                  aria-expanded={open}
-                  onClick={() => setOpenIndex(open ? -1 : idx)}
-                >
-                  <span>{item.q}</span>
-                  <span className="faq-toggle" aria-hidden="true">{open ? '−' : '+'}</span>
-                </button>
-                <div className="faq-answer" role="region">
-                  <p>{item.a}</p>
-                </div>
-              </div>
-            )
-          })}
-        </div>
 
         <div className="home-faq-cta">
           <Link to="/faq" className="btn-see-all-faq">{seeAll}</Link>

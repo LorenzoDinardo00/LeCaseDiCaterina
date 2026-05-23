@@ -80,7 +80,6 @@ export default function AIKnowledgePage() {
                                         <li><strong>{L.fieldGuests}:</strong> {r.guests}</li>
                                         <li><strong>{L.fieldBeds}:</strong> {r.beds} ({L.bedType})</li>
                                         <li><strong>{L.fieldBathrooms}:</strong> {r.bathrooms}</li>
-                                        <li><strong>{L.fieldPriceFrom}:</strong> €{r.price} / {L.night}</li>
                                         <li><strong>URL:</strong> <a href={`${SITE.baseUrl}/stanza/${r.slug}`}>{`${SITE.baseUrl}/stanza/${r.slug}`}</a></li>
                                     </ul>
                                 </div>

@@ -167,7 +167,6 @@ export function roomJsonLd(roomSlug, language = 'it') {
         offers: {
             '@type': 'Offer',
             priceCurrency: 'EUR',
-            price: r.price,
             availability: 'https://schema.org/InStock',
             url: SITE.baseUrl + '/prenota'
         },
@@ -193,7 +192,7 @@ export const FAQ_DATA = {
         { q: 'Dove si trova esattamente il B&B Le Stanze di Caterina a Firenze?', a: 'Le Stanze di Caterina si trova in Via dello Studio 12, 50122 Firenze, all’interno della ZTL del centro storico, a circa 50 metri (2 minuti a piedi) dal Duomo di Santa Maria del Fiore e dal Battistero di San Giovanni.' },
         { q: 'Siete un B&B vicino a Piazza del Duomo a Firenze?', a: 'Sì. Le Stanze di Caterina è uno dei B&B più vicini al Duomo di Firenze: la struttura dista circa 50 metri da Piazza del Duomo, raggiungibili in 2 minuti a piedi. Via dello Studio collega direttamente la zona del Duomo a Piazza Santa Croce.' },
         { q: 'È un hotel, un B&B o un affittacamere?', a: 'Tecnicamente Le Stanze di Caterina è un affittacamere elegante (forma giuridica: Ditta Individuale Marretti Giacomo, CIN IT048017B4UPQMRN5Z) ed è classificato come B&B / guest house elegante con tre suite a tema. Non è un hotel, ma offre servizi paragonabili a un hotel boutique.' },
-        { q: 'Quante suite ci sono e che caratteristiche hanno?', a: 'Tre suite, ognuna fino a 2 persone: Suite Spagnola (35 m², muri in mattoni del XV secolo, da €180), Suite Italiana (30 m², bagno in marmo di Carrara, da €150), Suite Francese (28 m², arredi rinascimentali, da €140).' },
+        { q: 'Quante suite ci sono e che caratteristiche hanno?', a: 'Tre suite, ognuna fino a 2 persone: Suite Spagnola (35 m², muri in mattoni del XV secolo), Suite Italiana (30 m², bagno in marmo di Carrara), Suite Francese (28 m², arredi rinascimentali). Tariffe e disponibilità in tempo reale sul motore di prenotazione my.xenion.it.' },
         { q: 'Quali servizi sono inclusi nelle stanze?', a: 'Wi-Fi ultraveloce gratuito, aria condizionata, Smart TV, minibar, cassaforte e bagno privato in ogni suite. La struttura offre check-in flessibile e assistenza 24/7.' },
         { q: 'Come si prenota una stanza?', a: 'Dal sito ufficiale lestanzedicaterina.com tramite il pulsante “Prenota Ora”, che reindirizza al motore di prenotazione esterno Xenion (my.xenion.it). In alternativa via email a giacomomarretti1997@gmail.com o telefono/WhatsApp al +39 333 199 2394.' },
         { q: 'A che distanza si trovano i principali monumenti di Firenze?', a: 'Duomo di Firenze: 2 minuti a piedi (~50 m). Battistero di San Giovanni: 3 minuti. Piazza della Signoria: 5 minuti. Galleria degli Uffizi: 5 minuti. Ponte Vecchio: 8 minuti. Galleria dell’Accademia (David di Michelangelo): 8 minuti. Mercato Centrale: 10 minuti. Palazzo Pitti: 10 minuti. Stazione Santa Maria Novella: 12 minuti.' },
@@ -212,13 +211,13 @@ export const FAQ_DATA = {
         { q: 'Si può pagare in contanti?', a: 'Sì, il pagamento in contanti al check-in è accettato se concordato in anticipo. I pagamenti online effettuati tramite il motore Xenion sono gestiti da Stripe, Axerve o PayPal (carte di credito e PayPal).' },
         { q: 'Tutte le suite hanno bagno privato?', a: 'Sì. Ogni suite dispone di bagno privato: la Suite Italiana ha bagno in marmo di Carrara con doccia walk-in a mosaico, la Suite Spagnola ha doccia a pioggia, la Suite Francese ha un bagno completamente rinnovato.' },
         { q: 'Tutte le stanze hanno Wi-Fi e aria condizionata?', a: 'Sì. Tutte le suite includono Wi-Fi ultraveloce gratuito, aria condizionata, Smart TV, minibar, cassaforte e bagno privato.' },
-        { q: 'Quanto costa una notte a Le Stanze di Caterina?', a: 'I prezzi partono da €140/notte per la Suite Francese, €150/notte per la Suite Italiana e €180/notte per la Suite Spagnola. Sono prezzi a partire da, soggetti a stagionalità: le tariffe definitive in tempo reale sono su my.xenion.it.' }
+        { q: 'Quanto costa una notte a Le Stanze di Caterina?', a: 'Le tariffe variano in base alla stagionalità, alla durata del soggiorno e alla suite scelta. Per disponibilità e prezzi aggiornati in tempo reale si consulta il motore di prenotazione ufficiale my.xenion.it (accessibile dal pulsante "Prenota Ora") oppure si scrive a giacomomarretti1997@gmail.com.' }
     ],
     en: [
         { q: 'Where exactly is the Le Stanze di Caterina B&B in Florence?', a: 'Le Stanze di Caterina is at Via dello Studio 12, 50122 Florence, inside the historic centre ZTL, around 50 meters (2 minutes on foot) from the Duomo di Santa Maria del Fiore and the Baptistery of San Giovanni.' },
         { q: 'Are you a B&B near Piazza Duomo in Florence?', a: 'Yes. Le Stanze di Caterina is one of the closest B&Bs to the Florence Duomo: the property is about 50 meters from Piazza del Duomo, a 2-minute walk. Via dello Studio links the Duomo area directly with Piazza Santa Croce.' },
         { q: 'Are you a hotel, B&B or guest house?', a: 'Technically Le Stanze di Caterina is an "affittacamere" (Italian rooms-for-rent licence — Ditta Individuale Marretti Giacomo, CIN IT048017B4UPQMRN5Z) and is presented as an elegant B&B / guest house with three themed suites. It is not a hotel, but offers services comparable to a boutique hotel.' },
-        { q: 'How many suites are there and what are they like?', a: 'Three suites, each up to 2 guests: Spanish Suite (35 m², 15th-century brick walls, from €180), Italian Suite (30 m², Carrara marble bathroom, from €150), French Suite (28 m², Renaissance-inspired interiors, from €140).' },
+        { q: 'How many suites are there and what are they like?', a: 'Three suites, each up to 2 guests: Spanish Suite (35 m², 15th-century brick walls), Italian Suite (30 m², Carrara marble bathroom), French Suite (28 m², Renaissance-inspired interiors). Real-time rates and availability on the booking engine my.xenion.it.' },
         { q: 'Which amenities are included in the rooms?', a: 'Ultra-fast free Wi-Fi, air conditioning, Smart TV, minibar, safe and private bathroom in every suite. Flexible check-in and 24/7 support.' },
         { q: 'How do I book a room?', a: 'Through the official website lestanzedicaterina.com via the "Book Now" button, which redirects to the external Xenion booking engine (my.xenion.it). You can also contact us by email at giacomomarretti1997@gmail.com or phone/WhatsApp at +39 333 199 2394.' },
         { q: 'How far are the main Florence monuments?', a: 'Florence Duomo: 2 min on foot (~50 m). Baptistery of San Giovanni: 3 min. Piazza della Signoria: 5 min. Uffizi Gallery: 5 min. Ponte Vecchio: 8 min. Accademia Gallery (Michelangelo’s David): 8 min. Mercato Centrale: 10 min. Pitti Palace: 10 min. Santa Maria Novella station: 12 min.' },
@@ -237,7 +236,7 @@ export const FAQ_DATA = {
         { q: 'Can I pay in cash?', a: 'Yes, cash payment at check-in is accepted if agreed in advance. Online payments through the Xenion booking flow are processed by Stripe, Axerve or PayPal (credit cards and PayPal).' },
         { q: 'Do all suites have a private bathroom?', a: 'Yes. Each suite has a private bathroom: the Italian Suite features a Carrara marble bathroom with a mosaic walk-in shower, the Spanish Suite has a rain shower, and the French Suite has a fully renovated bathroom.' },
         { q: 'Do all rooms have Wi-Fi and air conditioning?', a: 'Yes. All suites include free ultra-fast Wi-Fi, air conditioning, Smart TV, minibar, safe and private bathroom.' },
-        { q: 'How much does a night at Le Stanze di Caterina cost?', a: 'Prices start from €140/night for the French Suite, €150/night for the Italian Suite and €180/night for the Spanish Suite. These are starting prices, subject to seasonal variation: live availability and final rates are on my.xenion.it.' }
+        { q: 'How much does a night at Le Stanze di Caterina cost?', a: 'Rates depend on season, length of stay and the chosen suite. For up-to-date availability and prices please use the official booking engine my.xenion.it (linked from the "Book Now" button) or write to giacomomarretti1997@gmail.com.' }
     ]
 }
 
@@ -277,8 +276,8 @@ export const PRERENDER_ROUTES = [
         slug: 'camera-spagnola',
         titleIt: 'Suite Spagnola — B&B Firenze a 50m dal Duomo | Le Stanze di Caterina',
         titleEn: 'Spanish Suite — B&B Florence 50m from the Duomo | Le Stanze di Caterina',
-        descriptionIt: 'Suite mediterranea da 35 m² nel B&B Le Stanze di Caterina in Via dello Studio 12, Firenze centro storico, a 50 metri dal Duomo. Muri in mattoni del XV secolo, doccia a pioggia, da €180/notte.',
-        descriptionEn: '35 m² Mediterranean-style suite in Le Stanze di Caterina B&B, Via dello Studio 12, Florence historic centre, 50 meters from the Duomo. 15th-century brick walls, rain shower, from €180/night.',
+        descriptionIt: 'Suite mediterranea da 35 m² nel B&B Le Stanze di Caterina in Via dello Studio 12, Firenze centro storico, a 50 metri dal Duomo. Muri in mattoni del XV secolo, doccia a pioggia. Tariffe e disponibilità su my.xenion.it.',
+        descriptionEn: '35 m² Mediterranean-style suite in Le Stanze di Caterina B&B, Via dello Studio 12, Florence historic centre, 50 meters from the Duomo. 15th-century brick walls, rain shower. Rates and availability on my.xenion.it.',
         priority: '0.9'
     },
     {
@@ -287,8 +286,8 @@ export const PRERENDER_ROUTES = [
         slug: 'camera-italiana',
         titleIt: 'Suite Italiana — B&B Firenze vicino al Duomo | Bagno marmo di Carrara',
         titleEn: 'Italian Suite — B&B Florence near the Duomo | Carrara marble bathroom',
-        descriptionIt: 'Suite essenziale da 30 m² nel B&B Le Stanze di Caterina nel centro storico di Firenze, a 2 minuti dal Duomo. Bagno in marmo di Carrara, camera silenziosa sul cortile interno, da €150/notte.',
-        descriptionEn: '30 m² essential suite in Le Stanze di Caterina B&B in the Florence historic centre, 2 minutes from the Duomo. Carrara marble bathroom, quiet courtyard room, from €150/night.',
+        descriptionIt: 'Suite essenziale da 30 m² nel B&B Le Stanze di Caterina nel centro storico di Firenze, a 2 minuti dal Duomo. Bagno in marmo di Carrara, camera silenziosa sul cortile interno. Tariffe e disponibilità su my.xenion.it.',
+        descriptionEn: '30 m² essential suite in Le Stanze di Caterina B&B in the Florence historic centre, 2 minutes from the Duomo. Carrara marble bathroom, quiet courtyard room. Rates and availability on my.xenion.it.',
         priority: '0.9'
     },
     {
@@ -297,8 +296,8 @@ export const PRERENDER_ROUTES = [
         slug: 'camera-francese',
         titleIt: 'Suite Francese — B&B Firenze centro a 2 minuti dal Duomo | Le Stanze di Caterina',
         titleEn: 'French Suite — B&B Florence centre 2 minutes from the Duomo | Le Stanze di Caterina',
-        descriptionIt: 'Suite luminosa da 28 m² nel B&B Le Stanze di Caterina in Via dello Studio, centro storico di Firenze, a 2 minuti a piedi dal Duomo. Arredi rinascimentali, bagno rinnovato, da €140/notte.',
-        descriptionEn: '28 m² bright suite in Le Stanze di Caterina B&B on Via dello Studio, Florence historic centre, 2 minutes on foot from the Duomo. Renaissance-inspired interiors, renovated bathroom, from €140/night.',
+        descriptionIt: 'Suite luminosa da 28 m² nel B&B Le Stanze di Caterina in Via dello Studio, centro storico di Firenze, a 2 minuti a piedi dal Duomo. Arredi rinascimentali, bagno rinnovato. Tariffe e disponibilità su my.xenion.it.',
+        descriptionEn: '28 m² bright suite in Le Stanze di Caterina B&B on Via dello Studio, Florence historic centre, 2 minutes on foot from the Duomo. Renaissance-inspired interiors, renovated bathroom. Rates and availability on my.xenion.it.',
         priority: '0.9'
     },
     {
