@@ -538,17 +538,17 @@ function LocationSection() {
   )
 }
 
-// FAQ teaser in home: heading + intro + bottone "Vedi tutte le domande" → /faq.
-// La lista completa resta in /faq (linkata anche dal footer e dalla sitemap).
+// FAQ in home: 8 Q&A in accordion. Buona indicizzazione + materiale per AI.
 function HomeFaqSection() {
   const { language } = useLanguage()
   const lang = language || 'it'
+  const items = (FAQ_DATA[lang] || FAQ_DATA.it).slice(0, 8)
+  const [openIndex, setOpenIndex] = useState(0)
 
   const heading = lang === 'en' ? 'Frequently Asked Questions' : 'Domande Frequenti'
   const subheading = lang === 'en'
     ? 'Short answers to the most common questions about the Le Stanze di Caterina B&B in Florence, near the Duomo.'
     : 'Risposte brevi alle domande più comuni sul B&B Le Stanze di Caterina a Firenze, vicino al Duomo.'
-  const seeAll = lang === 'en' ? 'See all questions' : 'Vedi tutte le domande'
 
   return (
     <section id="faq" className="home-faq">
@@ -558,8 +558,26 @@ function HomeFaqSection() {
         <div className="separator"></div>
         <p className="home-faq-intro">{subheading}</p>
 
-        <div className="home-faq-cta">
-          <Link to="/faq" className="btn-see-all-faq">{seeAll}</Link>
+        <div className="home-faq-list">
+          {items.map((item, idx) => {
+            const open = openIndex === idx
+            return (
+              <div key={idx} className={`faq-item ${open ? 'open' : ''}`}>
+                <button
+                  type="button"
+                  className="faq-question"
+                  aria-expanded={open}
+                  onClick={() => setOpenIndex(open ? -1 : idx)}
+                >
+                  <span>{item.q}</span>
+                  <span className="faq-toggle" aria-hidden="true">{open ? '−' : '+'}</span>
+                </button>
+                <div className="faq-answer" role="region">
+                  <p>{item.a}</p>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
