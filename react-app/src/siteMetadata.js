@@ -2,7 +2,7 @@
 export const SITE = {
     name: 'Le Stanze di Caterina',
     legalName: 'Le Stanze di Caterina',
-    baseUrl: 'https://lestanzedicaterina.it',
+    baseUrl: 'https://lestanzedicaterina.com',
     defaultLanguage: 'it',
     supportedLanguages: ['it', 'en'],
     address: {
@@ -17,7 +17,7 @@ export const SITE = {
     email: 'giacomomarretti1997@gmail.com',
     whatsapp: '+39 333 199 2394',
     defaultImage: '/img/IMG_0714.JPG',
-    defaultImageAbsolute: 'https://lestanzedicaterina.it/img/IMG_0714.JPG',
+    defaultImageAbsolute: 'https://lestanzedicaterina.com/img/IMG_0714.JPG',
     sameAs: []
 }
 
@@ -166,7 +166,7 @@ export const FAQ_DATA = {
         { q: 'Dove si trova Le Stanze di Caterina?', a: 'Le Stanze di Caterina si trova in Via dello Studio 12, 50122 Firenze, a circa 50 metri (2 minuti a piedi) dal Duomo di Santa Maria del Fiore, nel cuore del centro storico fiorentino.' },
         { q: 'Quante stanze ci sono e che caratteristiche hanno?', a: 'Sono disponibili tre suite: Suite Spagnola (35 m², muri in mattoni del XV secolo, vista storica, da €180), Suite Italiana (30 m², bagno in marmo di Carrara, camera silenziosa, da €150) e Suite Francese (28 m², arredi rinascimentali, bagno completamente rinnovato, da €140). Ogni suite ospita fino a 2 persone.' },
         { q: 'Quali servizi sono inclusi?', a: 'Tutte le suite includono Wi-Fi ultraveloce gratuito, aria condizionata, Smart TV, minibar, cassaforte e bagno privato. La struttura offre check-in flessibile e assistenza 24/7.' },
-        { q: 'Come si prenota?', a: 'Le prenotazioni si effettuano dal sito ufficiale lestanzedicaterina.it tramite il pulsante “Prenota Ora”, che reindirizza al motore di prenotazione esterno Xenion (my.xenion.it). In alternativa è possibile contattarci via email a giacomomarretti1997@gmail.com o telefono/WhatsApp al +39 333 199 2394.' },
+        { q: 'Come si prenota?', a: 'Le prenotazioni si effettuano dal sito ufficiale lestanzedicaterina.com tramite il pulsante “Prenota Ora”, che reindirizza al motore di prenotazione esterno Xenion (my.xenion.it). In alternativa è possibile contattarci via email a giacomomarretti1997@gmail.com o telefono/WhatsApp al +39 333 199 2394.' },
         { q: 'A che distanza si trovano i principali monumenti?', a: 'Duomo di Firenze: 2 minuti a piedi. Battistero di San Giovanni: 3 minuti. Galleria degli Uffizi: 5 minuti. Piazza della Signoria: 5 minuti. Ponte Vecchio: 8 minuti. Galleria dell’Accademia (David di Michelangelo): 8 minuti. Mercato Centrale: 10 minuti. Palazzo Pitti: 10 minuti. Stazione Santa Maria Novella: 12 minuti.' },
         { q: 'Quali lingue parlate?', a: 'Italiano e inglese. Il sito è disponibile in entrambe le lingue.' },
         { q: 'Quali metodi di pagamento sono accettati?', a: 'Tramite il motore di prenotazione Xenion sono accettati pagamenti gestiti da Stripe, Axerve e PayPal. Per dettagli sui metodi consigliamo di completare la prenotazione su my.xenion.it.' },
@@ -178,7 +178,7 @@ export const FAQ_DATA = {
         { q: 'Where is Le Stanze di Caterina located?', a: 'Le Stanze di Caterina is at Via dello Studio 12, 50122 Florence, around 50 meters (2 minutes on foot) from the Duomo di Santa Maria del Fiore, in the heart of the historic centre.' },
         { q: 'How many rooms are there and what are they like?', a: 'There are three suites: Spanish Suite (35 m², 15th-century brick walls, historic view, from €180), Italian Suite (30 m², Carrara marble bathroom, quiet courtyard, from €150) and French Suite (28 m², Renaissance-inspired interiors, fully renovated bathroom, from €140). Each suite accommodates up to 2 guests.' },
         { q: 'Which amenities are included?', a: 'All suites include ultra-fast free Wi-Fi, air conditioning, Smart TV, minibar, safe and private bathroom. The property offers flexible check-in and 24/7 support.' },
-        { q: 'How do I book?', a: 'Bookings can be made on the official website lestanzedicaterina.it via the “Book Now” button, which redirects to the external booking engine Xenion (my.xenion.it). You can also contact us by email at giacomomarretti1997@gmail.com or by phone/WhatsApp at +39 333 199 2394.' },
+        { q: 'How do I book?', a: 'Bookings can be made on the official website lestanzedicaterina.com via the “Book Now” button, which redirects to the external booking engine Xenion (my.xenion.it). You can also contact us by email at giacomomarretti1997@gmail.com or by phone/WhatsApp at +39 333 199 2394.' },
         { q: 'How far are the main monuments?', a: 'Florence Duomo: 2 min on foot. Baptistery of San Giovanni: 3 min. Uffizi Gallery: 5 min. Piazza della Signoria: 5 min. Ponte Vecchio: 8 min. Accademia Gallery (Michelangelo’s David): 8 min. Mercato Centrale: 10 min. Pitti Palace: 10 min. Santa Maria Novella station: 12 min.' },
         { q: 'Which languages do you speak?', a: 'Italian and English. The site is available in both languages.' },
         { q: 'Which payment methods are accepted?', a: 'Through the Xenion booking engine, payments are processed by Stripe, Axerve and PayPal. For full details please complete the booking on my.xenion.it.' },

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Le Stanze di Caterina">
+  <rect width="64" height="64" rx="10" ry="10" fill="#6B2D35"/>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="7.5" ry="7.5" fill="none" stroke="#C9A962" stroke-width="1.2" stroke-opacity="0.85"/>
+  <text x="32" y="44" text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-size="42" font-weight="500" fill="#FAF6F1"
+        letter-spacing="0.5">C</text>
+  <circle cx="32" cy="53" r="1.6" fill="#C9A962"/>
+</svg>

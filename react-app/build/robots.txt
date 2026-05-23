@@ -1,5 +1,5 @@
 # Le Stanze di Caterina - robots.txt
-# Sito ufficiale: https://lestanzedicaterina.it
+# Sito ufficiale: https://lestanzedicaterina.com
 
 User-agent: *
 Allow: /
@@ -56,4 +56,4 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: https://lestanzedicaterina.it/sitemap.xml
+Sitemap: https://lestanzedicaterina.com/sitemap.xml

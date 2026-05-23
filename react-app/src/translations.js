@@ -120,10 +120,10 @@ export const translations = {
     // Booking Redirect Page
     booking: {
       title: 'Stai per lasciare il nostro sito',
-      intro: 'Il servizio di prenotazione NON è gestito da noi. È fornito da Xenion S.r.l., una società terza, autonoma e indipendente, sul dominio my.xenion.it, che non è di nostra proprietà. Cliccando su “Procedi” verrai reindirizzato fuori dal sito lestanzedicaterina.it e atterrerai su una piattaforma esterna gestita esclusivamente da Xenion.',
+      intro: 'Il servizio di prenotazione NON è gestito da noi. È fornito da Xenion S.r.l., una società terza, autonoma e indipendente, sul dominio my.xenion.it, che non è di nostra proprietà. Cliccando su “Procedi” verrai reindirizzato fuori dal sito lestanzedicaterina.com e atterrerai su una piattaforma esterna gestita esclusivamente da Xenion.',
       noticeTitle: 'Cosa succede dopo il click',
       points: [
-        'Lasci lestanzedicaterina.it ed entri su my.xenion.it, un sito di un fornitore terzo (Xenion S.r.l.) non gestito da noi.',
+        'Lasci lestanzedicaterina.com ed entri su my.xenion.it, un sito di un fornitore terzo (Xenion S.r.l.) non gestito da noi.',
         'I dati che inserirai nel form (nome, contatti, date, eventuali documenti) saranno raccolti e trattati direttamente da Xenion sul proprio sito.',
         'Se completerai un pagamento online, i dati di pagamento saranno gestiti da Stripe, Axerve o PayPal — anch’essi soggetti terzi autonomi.',
         'Sulla pagina Xenion possono essere caricati componenti di altre terze parti (Google Fonts, jQuery, Bootstrap CDN, Google Maps API). Si applicano le privacy/cookie policy pubblicate da Xenion sul proprio dominio.',
@@ -140,7 +140,7 @@ export const translations = {
     privacyPolicy: {
       title: 'Informativa sulla Privacy',
       lastUpdated: 'Ultimo aggiornamento: 21/05/2026',
-      intro: 'La presente informativa è resa ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 (GDPR) e del D.lgs. 196/2003 e successive modifiche, e descrive come vengono trattati i dati personali degli utenti che consultano il sito lestanzedicaterina.it e utilizzano i relativi servizi (richieste di contatto, prenotazioni e funzionalità correlate).',
+      intro: 'La presente informativa è resa ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 (GDPR) e del D.lgs. 196/2003 e successive modifiche, e descrive come vengono trattati i dati personali degli utenti che consultano il sito lestanzedicaterina.com e utilizzano i relativi servizi (richieste di contatto, prenotazioni e funzionalità correlate).',
       sections: [
         {
           title: '1. Titolare del Trattamento',
@@ -176,7 +176,7 @@ export const translations = {
         },
         {
           title: '9. Prenotazioni via Xenion — servizio esterno di terze parti',
-          body: 'Si avvisa l’utente che il servizio di prenotazione NON è gestito dal Titolare né è ospitato su domini del Titolare. Cliccando “Prenota Ora” l’utente lascia il sito lestanzedicaterina.it e viene reindirizzato al booking engine ospitato sul dominio my.xenion.it, di proprietà e gestione esclusiva di Xenion S.r.l., società terza, autonoma e giuridicamente distinta dal Titolare del trattamento. Il sito my.xenion.it, il software del booking engine, l’infrastruttura, i log e i cookie ivi impostati sono di esclusiva responsabilità di Xenion S.r.l. Nei rapporti con il Titolare, Xenion agisce come Responsabile del trattamento ex art. 28 GDPR limitatamente ai dati delle prenotazioni della struttura. Su my.xenion.it possono essere caricati componenti di soggetti terzi ulteriori (Google Fonts, jQuery, Bootstrap CDN, Google Maps API, Stripe, Axerve, PayPal), per i quali si applicano le rispettive informative. Qualora l’utente proceda al pagamento online, i dati di pagamento sono raccolti e gestiti direttamente da Stripe, Axerve o PayPal in qualità di titolari/responsabili autonomi del trattamento secondo le rispettive politiche. Il Titolare riceve da Xenion i soli dati strettamente necessari alla gestione del soggiorno. Per i trattamenti effettuati da Xenion (log tecnici, cookie, caricamenti da CDN, eventuali ulteriori finalità) si rimanda esclusivamente all’informativa privacy/cookie pubblicata da Xenion sul dominio my.xenion.it.'
+          body: 'Si avvisa l’utente che il servizio di prenotazione NON è gestito dal Titolare né è ospitato su domini del Titolare. Cliccando “Prenota Ora” l’utente lascia il sito lestanzedicaterina.com e viene reindirizzato al booking engine ospitato sul dominio my.xenion.it, di proprietà e gestione esclusiva di Xenion S.r.l., società terza, autonoma e giuridicamente distinta dal Titolare del trattamento. Il sito my.xenion.it, il software del booking engine, l’infrastruttura, i log e i cookie ivi impostati sono di esclusiva responsabilità di Xenion S.r.l. Nei rapporti con il Titolare, Xenion agisce come Responsabile del trattamento ex art. 28 GDPR limitatamente ai dati delle prenotazioni della struttura. Su my.xenion.it possono essere caricati componenti di soggetti terzi ulteriori (Google Fonts, jQuery, Bootstrap CDN, Google Maps API, Stripe, Axerve, PayPal), per i quali si applicano le rispettive informative. Qualora l’utente proceda al pagamento online, i dati di pagamento sono raccolti e gestiti direttamente da Stripe, Axerve o PayPal in qualità di titolari/responsabili autonomi del trattamento secondo le rispettive politiche. Il Titolare riceve da Xenion i soli dati strettamente necessari alla gestione del soggiorno. Per i trattamenti effettuati da Xenion (log tecnici, cookie, caricamenti da CDN, eventuali ulteriori finalità) si rimanda esclusivamente all’informativa privacy/cookie pubblicata da Xenion sul dominio my.xenion.it.'
         },
         {
           title: '10. Sicurezza',
@@ -193,7 +193,7 @@ export const translations = {
     cookiePolicy: {
       title: 'Cookie Policy',
       lastUpdated: 'Ultimo aggiornamento: 21/05/2026',
-      intro: 'Questo documento informa gli utenti sui cookie e sulle tecnologie analoghe utilizzate dal sito lestanzedicaterina.it, ai sensi del provvedimento del Garante Privacy del 10/06/2021 e dell’art. 122 del Codice Privacy. Per la disciplina generale del trattamento dei dati personali si rimanda alla Privacy Policy.',
+      intro: 'Questo documento informa gli utenti sui cookie e sulle tecnologie analoghe utilizzate dal sito lestanzedicaterina.com, ai sensi del provvedimento del Garante Privacy del 10/06/2021 e dell’art. 122 del Codice Privacy. Per la disciplina generale del trattamento dei dati personali si rimanda alla Privacy Policy.',
       whatAre: 'Cosa sono i cookie',
       whatAreText: 'I cookie sono piccoli file di testo che i siti web inviano al browser dell’utente, dove vengono memorizzati e poi ritrasmessi al sito stesso alla visita successiva. Analoghe tecnologie (es. local storage) possono memorizzare informazioni sul dispositivo dell’utente.',
       categoriesTitle: 'Categorie di cookie utilizzate',
@@ -220,7 +220,7 @@ export const translations = {
       otherToolsRows: [
         { name: 'Vercel Inc. (USA)', purpose: 'Hosting e distribuzione del sito. Log tecnici per sicurezza e prestazioni.', duration: 'Vedi privacy Vercel', type: 'Responsabile del trattamento' },
         { name: 'Bunny.net (Slovenia)', purpose: 'Distribuzione dei font web (fonts.bunny.net). Non imposta cookie di profilazione; non condivide dati con terzi a fini pubblicitari.', duration: 'Solo per la durata della richiesta', type: 'Responsabile del trattamento' },
-        { name: 'Xenion S.r.l. (Italia) — fornitore esterno', purpose: 'Servizio booking engine ospitato su my.xenion.it, dominio NON di proprietà del Titolare. L’utente che clicca “Prenota Ora” esce dal sito lestanzedicaterina.it e viene reindirizzato a Xenion. Sulla pagina Xenion possono essere caricati ulteriori script di terze parti (Google Fonts, jQuery, Bootstrap CDN, Stripe, Axerve, PayPal, Google Maps API). I cookie eventualmente impostati su my.xenion.it sono di esclusiva responsabilità di Xenion.', duration: 'Vedi privacy/cookie policy pubblicate su my.xenion.it', type: 'Soggetto terzo, autonomo e distinto dal Titolare. Responsabile del trattamento ex art. 28 GDPR limitatamente alle prenotazioni della struttura.' },
+        { name: 'Xenion S.r.l. (Italia) — fornitore esterno', purpose: 'Servizio booking engine ospitato su my.xenion.it, dominio NON di proprietà del Titolare. L’utente che clicca “Prenota Ora” esce dal sito lestanzedicaterina.com e viene reindirizzato a Xenion. Sulla pagina Xenion possono essere caricati ulteriori script di terze parti (Google Fonts, jQuery, Bootstrap CDN, Stripe, Axerve, PayPal, Google Maps API). I cookie eventualmente impostati su my.xenion.it sono di esclusiva responsabilità di Xenion.', duration: 'Vedi privacy/cookie policy pubblicate su my.xenion.it', type: 'Soggetto terzo, autonomo e distinto dal Titolare. Responsabile del trattamento ex art. 28 GDPR limitatamente alle prenotazioni della struttura.' },
         { name: 'Stripe / Axerve / PayPal', purpose: 'Elaborazione dei pagamenti effettuati nel flusso Xenion. Operano come autonomi titolari per gli aspetti antifrode e contabili.', duration: 'Vedi le rispettive privacy policy', type: 'Titolari/Responsabili autonomi nel proprio ambito' }
       ],
       managementTitle: 'Come gestire o revocare il consenso',
@@ -401,10 +401,10 @@ export const translations = {
     // Booking Redirect Page
     booking: {
       title: 'You are about to leave our website',
-      intro: 'The booking service is NOT operated by us. It is provided by Xenion S.r.l., a separate, independent third-party company, on the domain my.xenion.it, which is not owned by us. By clicking “Proceed” you will be redirected away from lestanzedicaterina.it and you will land on an external platform operated exclusively by Xenion.',
+      intro: 'The booking service is NOT operated by us. It is provided by Xenion S.r.l., a separate, independent third-party company, on the domain my.xenion.it, which is not owned by us. By clicking “Proceed” you will be redirected away from lestanzedicaterina.com and you will land on an external platform operated exclusively by Xenion.',
       noticeTitle: 'What happens after you click',
       points: [
-        'You leave lestanzedicaterina.it and enter my.xenion.it, a website run by a third-party provider (Xenion S.r.l.) that we do not operate.',
+        'You leave lestanzedicaterina.com and enter my.xenion.it, a website run by a third-party provider (Xenion S.r.l.) that we do not operate.',
         'The data you enter in the form (name, contact details, dates, any identity documents) will be collected and processed directly by Xenion on its own site.',
         'If you complete an online payment, payment data will be processed by Stripe, Axerve or PayPal — also independent third parties.',
         'The Xenion page may load further third-party components (Google Fonts, jQuery, Bootstrap CDN, Google Maps API). Xenion’s privacy and cookie policies — published on its own domain — apply.',
@@ -421,7 +421,7 @@ export const translations = {
     privacyPolicy: {
       title: 'Privacy Notice',
       lastUpdated: 'Last updated: 21/05/2026',
-      intro: 'This notice is provided under Articles 13 and 14 of Regulation (EU) 2016/679 (GDPR) and Italian Legislative Decree 196/2003 as amended, and describes how personal data of users who visit the website lestanzedicaterina.it and use related services (contact requests, bookings and related features) are processed.',
+      intro: 'This notice is provided under Articles 13 and 14 of Regulation (EU) 2016/679 (GDPR) and Italian Legislative Decree 196/2003 as amended, and describes how personal data of users who visit the website lestanzedicaterina.com and use related services (contact requests, bookings and related features) are processed.',
       sections: [
         {
           title: '1. Data Controller',
@@ -457,7 +457,7 @@ export const translations = {
         },
         {
           title: '9. Bookings via Xenion — external third-party service',
-          body: 'The user is hereby informed that the booking service is NOT operated by the Controller, nor is it hosted on any domain of the Controller. By clicking “Book Now” the user leaves the website lestanzedicaterina.it and is redirected to the booking engine hosted on the domain my.xenion.it, which is owned and exclusively operated by Xenion S.r.l., a third-party company, legally distinct and independent from the Controller. The my.xenion.it website, the booking engine software, the underlying infrastructure, the logs and any cookies set thereon are the sole responsibility of Xenion S.r.l. In its relationship with the Controller, Xenion acts as Data Processor under Art. 28 GDPR solely with respect to the booking data of the property. On my.xenion.it additional third-party components may be loaded (Google Fonts, jQuery, Bootstrap CDN, Google Maps API, Stripe, Axerve, PayPal), to which the respective privacy notices apply. Should the user proceed to online payment, payment data are collected and processed directly by Stripe, Axerve or PayPal as independent controllers/processors under their own policies. The Controller only receives from Xenion the data strictly necessary to manage the stay. For any processing carried out by Xenion (technical logs, cookies, CDN loads, any further purposes) please refer exclusively to the privacy/cookie notice published by Xenion on the my.xenion.it domain.'
+          body: 'The user is hereby informed that the booking service is NOT operated by the Controller, nor is it hosted on any domain of the Controller. By clicking “Book Now” the user leaves the website lestanzedicaterina.com and is redirected to the booking engine hosted on the domain my.xenion.it, which is owned and exclusively operated by Xenion S.r.l., a third-party company, legally distinct and independent from the Controller. The my.xenion.it website, the booking engine software, the underlying infrastructure, the logs and any cookies set thereon are the sole responsibility of Xenion S.r.l. In its relationship with the Controller, Xenion acts as Data Processor under Art. 28 GDPR solely with respect to the booking data of the property. On my.xenion.it additional third-party components may be loaded (Google Fonts, jQuery, Bootstrap CDN, Google Maps API, Stripe, Axerve, PayPal), to which the respective privacy notices apply. Should the user proceed to online payment, payment data are collected and processed directly by Stripe, Axerve or PayPal as independent controllers/processors under their own policies. The Controller only receives from Xenion the data strictly necessary to manage the stay. For any processing carried out by Xenion (technical logs, cookies, CDN loads, any further purposes) please refer exclusively to the privacy/cookie notice published by Xenion on the my.xenion.it domain.'
         },
         {
           title: '10. Security',
@@ -474,7 +474,7 @@ export const translations = {
     cookiePolicy: {
       title: 'Cookie Policy',
       lastUpdated: 'Last updated: 21/05/2026',
-      intro: 'This document informs users about cookies and similar technologies used on lestanzedicaterina.it, in accordance with the Italian Data Protection Authority Order of 10/06/2021 and Art. 122 of the Italian Privacy Code. For the general framework on personal data processing please refer to the Privacy Notice.',
+      intro: 'This document informs users about cookies and similar technologies used on lestanzedicaterina.com, in accordance with the Italian Data Protection Authority Order of 10/06/2021 and Art. 122 of the Italian Privacy Code. For the general framework on personal data processing please refer to the Privacy Notice.',
       whatAre: 'What are cookies',
       whatAreText: 'Cookies are small text files that websites send to the user’s browser, where they are stored and then sent back to the same site on subsequent visits. Similar technologies (e.g. local storage) can store information on the user’s device.',
       categoriesTitle: 'Categories of cookies used',
@@ -501,7 +501,7 @@ export const translations = {
       otherToolsRows: [
         { name: 'Vercel Inc. (USA)', purpose: 'Site hosting and delivery. Technical logs for security and performance.', duration: 'See Vercel privacy notice', type: 'Data Processor' },
         { name: 'Bunny.net (Slovenia)', purpose: 'Delivery of web fonts (fonts.bunny.net). Does not set profiling cookies; does not share data with third parties for advertising.', duration: 'Request lifetime only', type: 'Data Processor' },
-        { name: 'Xenion S.r.l. (Italy) — external provider', purpose: 'Booking engine service hosted on my.xenion.it, a domain that is NOT owned by the Controller. Users clicking “Book Now” leave the lestanzedicaterina.it site and are redirected to Xenion. Additional third-party scripts may be loaded on the Xenion page (Google Fonts, jQuery, Bootstrap CDN, Stripe, Axerve, PayPal, Google Maps API). Any cookies set on my.xenion.it are the sole responsibility of Xenion.', duration: 'See the privacy/cookie notices published on my.xenion.it', type: 'Third party, independent and distinct from the Controller. Data Processor under Art. 28 GDPR limited to bookings of the property.' },
+        { name: 'Xenion S.r.l. (Italy) — external provider', purpose: 'Booking engine service hosted on my.xenion.it, a domain that is NOT owned by the Controller. Users clicking “Book Now” leave the lestanzedicaterina.com site and are redirected to Xenion. Additional third-party scripts may be loaded on the Xenion page (Google Fonts, jQuery, Bootstrap CDN, Stripe, Axerve, PayPal, Google Maps API). Any cookies set on my.xenion.it are the sole responsibility of Xenion.', duration: 'See the privacy/cookie notices published on my.xenion.it', type: 'Third party, independent and distinct from the Controller. Data Processor under Art. 28 GDPR limited to bookings of the property.' },
         { name: 'Stripe / Axerve / PayPal', purpose: 'Processing of payments made in the Xenion flow. Act as independent controllers for anti-fraud and accounting purposes.', duration: 'See their respective privacy policies', type: 'Independent Controllers/Processors within their scope' }
       ],
       managementTitle: 'How to manage or withdraw consent',

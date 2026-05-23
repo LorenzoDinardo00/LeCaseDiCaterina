@@ -1,0 +1,25 @@
+{
+  "name": "Le Stanze di Caterina",
+  "short_name": "Caterina",
+  "description": "B&B di lusso a Firenze, a 50 metri dal Duomo.",
+  "lang": "it-IT",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FAF6F1",
+  "theme_color": "#6B2D35",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/logo.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

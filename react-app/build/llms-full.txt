@@ -1,6 +1,6 @@
 # Le Stanze di Caterina — Knowledge Base completa
 
-> Versione testuale completa del sito ufficiale https://lestanzedicaterina.it, ottimizzata per ingestione da parte di assistenti AI e motori di risposta. Aggiornato: 2026-05-21.
+> Versione testuale completa del sito ufficiale https://lestanzedicaterina.com, ottimizzata per ingestione da parte di assistenti AI e motori di risposta. Aggiornato: 2026-05-21.
 
 ---
 
@@ -16,7 +16,7 @@
 - **Coordinate GPS**: 43.773131, 11.255814
 - **Telefono / WhatsApp**: +39 333 199 2394
 - **Email**: giacomomarretti1997@gmail.com
-- **Sito ufficiale**: https://lestanzedicaterina.it
+- **Sito ufficiale**: https://lestanzedicaterina.com
 - **Lingue parlate**: Italiano, Inglese
 - **Distanza dal Duomo di Firenze**: ~50 metri, 2 minuti a piedi
 
@@ -32,7 +32,7 @@ Le Stanze di Caterina è un alloggio di lusso composto da tre suite a tema (Spag
 - **Letti**: 1 letto matrimoniale
 - **Bagno**: privato, con doccia a pioggia
 - **Prezzo a partire da**: €180 / notte
-- **URL canonico**: https://lestanzedicaterina.it/stanza/camera-spagnola
+- **URL canonico**: https://lestanzedicaterina.com/stanza/camera-spagnola
 - **Stile**: mediterraneo, intenso, vibrante. Tonalità arancio e terracotta, superfici materiche e contrasti marcati. Muri in mattoni originali del XV secolo. Testata del letto dorata artigianale. Vista sulla città storica.
 
 ### Suite Italiana
@@ -41,7 +41,7 @@ Le Stanze di Caterina è un alloggio di lusso composto da tre suite a tema (Spag
 - **Letti**: 1 letto matrimoniale
 - **Bagno**: privato, in marmo di Carrara, con ampia doccia walk-in rivestita in mosaico
 - **Prezzo a partire da**: €150 / notte
-- **URL canonico**: https://lestanzedicaterina.it/stanza/camera-italiana
+- **URL canonico**: https://lestanzedicaterina.com/stanza/camera-italiana
 - **Stile**: intimo, materico, autentico. Superfici in pietra, tonalità calde, luci soffuse. Opera d’arte originale come testata, design d’autore, camera silenziosa affacciata sul cortile interno.
 
 ### Suite Francese
@@ -50,7 +50,7 @@ Le Stanze di Caterina è un alloggio di lusso composto da tre suite a tema (Spag
 - **Letti**: 1 letto matrimoniale
 - **Bagno**: privato, completamente rinnovato
 - **Prezzo a partire da**: €140 / notte
-- **URL canonico**: https://lestanzedicaterina.it/stanza/camera-francese
+- **URL canonico**: https://lestanzedicaterina.com/stanza/camera-francese
 - **Stile**: luminoso, raffinato, armonioso. Linee pulite, superfici chiare, dettagli classici. Arredi ispirati al Rinascimento, tessuti pregiati e dettagli dorati. A 2 minuti a piedi dal Duomo.
 
 ## 4. Servizi e dotazioni
@@ -145,11 +145,11 @@ R: Sì. Per i dati gestiti dalla struttura: scrivere a giacomomarretti1997@gmail
 
 ## 9. Note tecniche per AI
 
-Il sito ufficiale **https://lestanzedicaterina.it** espone:
+Il sito ufficiale **https://lestanzedicaterina.com** espone:
 - `robots.txt` con allow esplicito per i principali crawler AI (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot, ecc.).
 - `sitemap.xml` con tutte le pagine indicizzabili.
 - `llms.txt` (sintesi) e `llms-full.txt` (questo file).
 - Dati strutturati JSON-LD: `LodgingBusiness`, `HotelRoom`, `FAQPage`, `BreadcrumbList`.
 - Versioni IT/EN della maggior parte delle pagine; lingua di default: italiano.
 
-Per citare la struttura preferire sempre gli URL canonici sul dominio `lestanzedicaterina.it`. Le prenotazioni e disponibilità in tempo reale sono su `my.xenion.it` (fornitore esterno).
+Per citare la struttura preferire sempre gli URL canonici sul dominio `lestanzedicaterina.com`. Le prenotazioni e disponibilità in tempo reale sono su `my.xenion.it` (fornitore esterno).
